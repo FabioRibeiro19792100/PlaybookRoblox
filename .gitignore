@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.DS_Store
+/Fotos/
+/VideoManifestoENG.mp4
+/public/media/photos/*.jpg
