@@ -161,6 +161,7 @@ export default function App() {
   const [theme, setTheme] = useState("light");
   const [videoOpen, setVideoOpen] = useState(false);
   const [showSplash, setShowSplash] = useState(true);
+  const [splashPhase, setSplashPhase] = useState("logo");
   const mainRef = useRef(null);
   const bodySlotRef = useRef(null);
 
@@ -186,11 +187,23 @@ export default function App() {
   }, [theme]);
 
   useEffect(() => {
+    const fadeId = window.setTimeout(() => {
+      setSplashPhase("fade");
+    }, 700);
+
+    const titleId = window.setTimeout(() => {
+      setSplashPhase("title");
+    }, 1180);
+
     const timeoutId = window.setTimeout(() => {
       setShowSplash(false);
-    }, 850);
+    }, 2450);
 
-    return () => window.clearTimeout(timeoutId);
+    return () => {
+      window.clearTimeout(fadeId);
+      window.clearTimeout(titleId);
+      window.clearTimeout(timeoutId);
+    };
   }, []);
 
   useEffect(() => {
@@ -214,8 +227,14 @@ export default function App() {
 
   return (
     <>
-      <div id="splash" className={showSplash ? "" : "hidden"} aria-hidden={!showSplash}>
-        <img id="splash-logo" src={REAL_LOGO} alt="Expedição Roblox" />
+      <div id="splash" className={showSplash ? "" : "hidden"} data-phase={splashPhase} aria-hidden={!showSplash}>
+        <div className="splash-inner">
+          <img id="splash-logo" src={REAL_LOGO} alt="Expedição Roblox" />
+          <div className="splash-title-wrap" aria-hidden={splashPhase !== "title"}>
+            <span className="splash-title-arrow" aria-hidden="true">→</span>
+            <span className="splash-title">Playbook Latam</span>
+          </div>
+        </div>
       </div>
       <div className="app">
         <aside className="rail">
