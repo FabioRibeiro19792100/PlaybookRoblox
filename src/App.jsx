@@ -160,6 +160,7 @@ export default function App() {
   const [lang, setLang] = useState("pt");
   const [theme, setTheme] = useState("light");
   const [videoOpen, setVideoOpen] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
   const mainRef = useRef(null);
   const bodySlotRef = useRef(null);
 
@@ -185,6 +186,14 @@ export default function App() {
   }, [theme]);
 
   useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      setShowSplash(false);
+    }, 850);
+
+    return () => window.clearTimeout(timeoutId);
+  }, []);
+
+  useEffect(() => {
     if (bodySlotRef.current) {
       bodySlotRef.current.scrollTop = 0;
     }
@@ -205,6 +214,9 @@ export default function App() {
 
   return (
     <>
+      <div id="splash" className={showSplash ? "" : "hidden"} aria-hidden={!showSplash}>
+        <img id="splash-logo" src={REAL_LOGO} alt="Expedição Roblox" />
+      </div>
       <div className="app">
         <aside className="rail">
           <div className="rail-header">
