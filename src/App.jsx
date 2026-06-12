@@ -8,7 +8,7 @@ import {
 } from "./playbookData";
 
 const RAIL_GROUPS = [
-  { labelKey: "g.dir", items: ["visao", "pilares", "teoria", "gov"] },
+  { labelKey: "g.dir", items: ["visao", "pilares", "gov"] },
   {
     labelKey: "g.plan",
     items: ["setup", "evento", "infra", "metodo", "ferramentas", "partic"],
@@ -98,6 +98,14 @@ function RailIcon() {
   );
 }
 
+function CheckIcon() {
+  return (
+    <svg className="rail-group-check" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.4" viewBox="0 0 24 24">
+      <path d="M20 6L9 17l-5-5" />
+    </svg>
+  );
+}
+
 function VideoOverlayTrigger({ title, onOpen }) {
   return (
     <button className="hero-video-trigger" type="button" onClick={onOpen} aria-label={title}>
@@ -179,6 +187,7 @@ export default function App() {
   const currentCopy = VIDEO_COPY[lang] ?? VIDEO_COPY.pt;
   const bodyHtml = renderBody(currentPage.body, lang);
   const asideHtml = renderAside(currentPage.aside, lang);
+  const hasAside = asideHtml.trim() !== "";
   const themeLabel = (MODE_LABELS[lang] ?? MODE_LABELS.pt)[theme];
 
   useEffect(() => {
@@ -236,7 +245,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="app">
+      <div className={`app${hasAside ? "" : " no-aside"}`}>
         <aside className="rail">
           <div className="rail-header">
             <span className="rail-badge">
@@ -251,7 +260,10 @@ export default function App() {
 
           {RAIL_GROUPS.map((group) => (
             <div className="rail-group" key={group.labelKey}>
-              <span className="rail-group-label">{getTranslation(lang, group.labelKey)}</span>
+              <span className="rail-group-label">
+                <CheckIcon />
+                {getTranslation(lang, group.labelKey)}
+              </span>
               {group.items.map((pageId) => (
                 <button
                   key={pageId}
@@ -326,9 +338,11 @@ export default function App() {
           </div>
         </main>
 
-        <aside className="aside">
-          <div dangerouslySetInnerHTML={{ __html: asideHtml }} />
-        </aside>
+        {hasAside && (
+          <aside className="aside">
+            <div dangerouslySetInnerHTML={{ __html: asideHtml }} />
+          </aside>
+        )}
 
         <footer className="foot">
           <span className="foot-brand">{getTranslation(lang, "foot.brand")}</span>

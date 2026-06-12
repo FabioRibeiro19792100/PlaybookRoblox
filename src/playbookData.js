@@ -6,7 +6,7 @@ export const PAGES = [
     img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&auto=format&fit=crop',
     caputEyebrow: { pt:'O programa em uma página', en:'The program on one page', es:'El programa en una página' },
     caputTitle: { pt:'O programa em uma página', en:'The program in one page', es:'El programa en una página' },
-    caputDesc: { pt:'A Expedição Roblox na Estrada leva criação digital a novos territórios por meio de eventos práticos conduzidos por parceiros locais. Esta abertura dá ao parceiro o retrato completo do programa antes de qualquer decisão operacional.', en:'Roblox Expedition on the Road brings digital creation to new territories through practical events led by local partners. This opening gives the partner the full picture of the program before any operational decision.', es:'La Expedición Roblox en la Carretera lleva la creación digital a nuevos territorios a través de eventos prácticos liderados por socios locales.' },
+    caputDesc: { pt:'A Expedição Roblox leva criação digital a novos territórios por meio de eventos práticos conduzidos por parceiros locais.', en:'Roblox Expedition brings digital creation to new territories through practical events led by local partners.', es:'La Expedición Roblox lleva la creación digital a nuevos territorios a través de eventos prácticos conducidos por socios locales.' },
     body: 'visao',
     aside: 'visao'
   },
@@ -22,17 +22,6 @@ export const PAGES = [
     aside: 'empty'
   },
   {
-    id: 'teoria',
-    group: { pt:'Diretrizes do projeto', en:'Project Guidelines', es:'Directrices del proyecto' },
-    title: { pt:'Teoria da mudança', en:'Theory of Change', es:'Teoría del cambio' },
-    img: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=1200&auto=format&fit=crop',
-    caputEyebrow: { pt:'Do insumo ao impacto', en:'From input to impact', es:'Del insumo al impacto' },
-    caputTitle: { pt:'Do insumo ao impacto', en:'From input to impact', es:'Del insumo al impacto' },
-    caputDesc: { pt:'Uma teoria da mudança explicita o caminho causal entre aquilo que se entrega e a transformação que se espera. A cadeia parte de uma premissa sobre aprendizagem e desemboca nos resultados que sinalizam o movimento.', en:'A theory of change makes explicit the causal path between what is delivered and the transformation expected.', es:'Una teoría del cambio hace explícito el camino causal entre lo que se entrega y la transformación esperada.' },
-    body: 'teoria',
-    aside: 'teoria'
-  },
-  {
     id: 'gov',
     group: { pt:'Diretrizes do projeto', en:'Project Guidelines', es:'Directrices del proyecto' },
     title: { pt:'Governança', en:'Governance', es:'Gobernanza' },
@@ -41,7 +30,7 @@ export const PAGES = [
     caputTitle: { pt:'Centro e território em equilíbrio', en:'Center and territory in balance', es:'Centro y territorio en equilibrio' },
     caputDesc: { pt:'A equipe central responde pela consistência pedagógica e o parceiro local pela mobilização do território. Os quadros abaixo delimitam papéis e o alcance da autonomia de cada lado.', en:'The central team is responsible for pedagogical consistency and the local partner for territory mobilization.', es:'El equipo central responde por la consistencia pedagógica y el socio local por la movilización del territorio.' },
     body: 'gov',
-    aside: 'gov'
+    aside: 'empty'
   },
   {
     id: 'setup',
@@ -112,7 +101,7 @@ export const PAGES = [
   {
     id: 'comunidade',
     group: { pt:'Outcomes', en:'Outcomes', es:'Resultados' },
-    title: { pt:'Comunidade', en:'Community', es:'Comunidad' },
+    title: { pt:'Continuidade', en:'Continuity', es:'Continuidad' },
     img: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&auto=format&fit=crop',
     caputEyebrow: { pt:'O que permanece depois do evento', en:'What remains after the event', es:'Lo que permanece después del evento' },
     caputTitle: { pt:'O que permanece depois do evento', en:'What remains after the event', es:'Lo que permanece después del evento' },
@@ -138,9 +127,9 @@ export const PAGES = [
     img: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1200&auto=format&fit=crop',
     caputEyebrow: { pt:'Escala com consistência e rede', en:'Scale with consistency and network', es:'Escala con consistencia y red' },
     caputTitle: { pt:'Escala com consistência e rede', en:'Scale with consistency and network', es:'Escala con consistencia y red' },
-    caputDesc: { pt:'A Expedição Roblox na Estrada foi desenhada para crescer por uma rede de parceiros comprometidos com a democratização da criação digital. O modelo combina excelência pedagógica centralizada com mobilização local distribuída.', en:'Roblox Expedition on the Road was designed to grow through a network of partners committed to the democratization of digital creation.', es:'La Expedición Roblox en la Carretera fue diseñada para crecer a través de una red de socios comprometidos con la democratización de la creación digital.' },
+    caputDesc: { pt:'A Expedição Roblox foi desenhada para crescer por uma rede de parceiros comprometidos com a democratização da criação digital através do Roblox Studio. O modelo combina excelência pedagógica centralizada com mobilização local distribuída. No México, o piloto prevê cinco ativações locais, com duas visitas presenciais da equipe central para supervisão de qualidade e calibração in loco.', en:'Roblox Expedition was designed to grow through a network of partners committed to the democratization of digital creation through Roblox Studio. The model combines centralized pedagogical excellence with distributed local mobilization. In Mexico, the pilot foresees five local activations, with two in-person visits from the central team for quality oversight and on-site calibration.', es:'La Expedición Roblox fue diseñada para crecer a través de una red de socios comprometidos con la democratización de la creación digital a través de Roblox Studio. El modelo combina excelencia pedagógica centralizada con movilización local distribuida. En México, el piloto prevé cinco activaciones locales, con dos visitas presenciales del equipo central para supervisión de calidad y calibración in situ.' },
     body: 'expansao',
-    aside: 'empty'
+    aside: 'expansao'
   }
 ];
 
@@ -182,12 +171,12 @@ const BODIES = {
     <div class="gov-grid">
       <div class="gov-panel central"><div class="gov-panel-title">${t('b.gov.ct')}</div>
         <ul class="plain-list blue">
-          <li>${t('b.gov.c1')}</li><li>${t('b.gov.c2')}</li><li>${t('b.gov.c3')}</li><li>${t('b.gov.c4')}</li><li>${t('b.gov.c5')}</li>
+          <li>${t('b.gov.c1')}</li><li>${t('b.gov.c2')}</li><li>${t('b.gov.c3')}</li><li>${t('b.gov.c4')}</li><li>${t('b.gov.c5')}</li><li>${t('b.gov.c6')}</li>
         </ul>
       </div>
       <div class="gov-panel local"><div class="gov-panel-title">${t('b.gov.lt')}</div>
         <ul class="plain-list amber">
-          <li>${t('b.gov.l1')}</li><li>${t('b.gov.l2')}</li><li>${t('b.gov.l3')}</li><li>${t('b.gov.l4')}</li><li>${t('b.gov.l5')}</li>
+          <li>${t('b.gov.l1')}</li><li>${t('b.gov.l2')}</li><li>${t('b.gov.l3')}</li><li>${t('b.gov.l4')}</li><li>${t('b.gov.l5')}</li><li>${t('b.gov.l6')}</li>
         </ul>
       </div>
     </div>`,
@@ -299,10 +288,10 @@ const BODIES = {
   comunidade: () => `
     <div class="phase-row">
       <div class="phase-card f1"><div class="phase-label">${t('b.com.l1')}</div><div class="phase-title">${t('b.com.t1')}</div>
-        <ul class="plain-list blue"><li>${t('b.com.c1')}</li><li>${t('b.com.c2')}</li><li>${t('b.com.c3')}</li><li>${t('b.com.c4')}</li></ul>
+        <ul class="plain-list blue"><li>${t('b.com.c1')}</li><li>${t('b.com.c2')}</li><li>${t('b.com.c3')}</li></ul>
       </div>
       <div class="phase-card f2"><div class="phase-label">${t('b.com.l2')}</div><div class="phase-title">${t('b.com.t2')}</div>
-        <ul class="plain-list amber"><li>${t('b.com.e1')}</li><li>${t('b.com.e2')}</li><li>${t('b.com.e3')}</li></ul>
+        <ul class="plain-list amber"><li>${t('b.com.e1')}</li><li>${t('b.com.e2')}</li></ul>
       </div>
       <div class="phase-card f3"><div class="phase-label">${t('b.com.l3')}</div><div class="phase-title">${t('b.com.t3')}</div>
         <ul class="plain-list red"><li>${t('b.com.s1')}</li><li>${t('b.com.s2')}</li><li>${t('b.com.s3')}</li><li>${t('b.com.s4')}</li></ul>
@@ -317,11 +306,12 @@ const BODIES = {
     </div>`,
 
   expansao: () => `
+    <div class="exp-heading">${t('b.exp.head')}</div>
     <div class="exp-steps">
-      ${[1,2,3,4,5,6,7,8,9,10].map(i=>`
+      ${[1,2,3,4,5].map(i=>`
         <div class="exp-step">
           <div class="exp-step-num">${String(i).padStart(2,'0')}</div>
-          <div class="exp-step-text">${t('b.exp.s'+i)}</div>
+          <div class="exp-step-text">${t('b.exp.s'+i)}${i===1?`<ul class="exp-step-sub">${['m1','m2','m3','m4','m5','m6'].map(m=>`<li>${t('b.exp.'+m)}</li>`).join('')}</ul>`:''}</div>
         </div>`).join('')}
     </div>`
 };
@@ -329,10 +319,11 @@ const BODIES = {
 // ═══════════════════════════════════════
 // ASIDE BUILDERS
 // ═══════════════════════════════════════
-function asideItem(icon, titleKey, tagKey, tagClass) {
+function asideItem(icon, titleKey, tagKey, tagClass, href) {
   const title = t(titleKey) || titleKey;
   const tag = tagKey ? t(tagKey) || tagKey : '';
-  return `<a class="aside-item" href="#">
+  const link = href ? `href="${href}" target="_blank" rel="noopener"` : 'href="#"';
+  return `<a class="aside-item" ${link}>
     ${icon}
     <div class="aside-item-body">
       <span class="aside-item-title">${title}</span>
@@ -342,39 +333,46 @@ function asideItem(icon, titleKey, tagKey, tagClass) {
 }
 const docIcon = `<svg class="aside-item-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`;
 const linkIcon = `<svg class="aside-item-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+const dashIcon = `<svg class="aside-item-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`;
 
 const ASIDES = {
-  visao: () => `<div class="aside-group"><span class="aside-label">${t('a.res')}</span>
-    ${[1,2,3,4,5].map(i=>asideItem(docIcon,'a.res.'+i,'a.tag.result','tip')).join('')}
+  visao: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
+    ${asideItem(linkIcon,'a.ref.site','a.tag.link','link','https://roblox.mastertech.com.br')}
+    ${asideItem(linkIcon,'a.ref.video','a.tag.video','video','/media/video/VideoManifestoENG.mp4')}
+    ${asideItem(dashIcon,'a.ref.report','a.tag.dash','dash','https://exproblox.report')}
+    ${asideItem(docIcon,'a.ref.miv','a.tag.doc','doc','https://drive.google.com/file/d/1L-vTGaYITo3n6SfQadoRHGuGuQCHRg8Z/view?usp=share_link')}
   </div>`,
-  teoria: () => `<div class="aside-group"><span class="aside-label">${t('a.ins')}</span>
+  teoria: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${[1,2,3,4,5,6,7,8,9,10].map(i=>asideItem(docIcon,'a.ins.'+i,'','doc')).join('')}
   </div>`,
-  gov: () => `<div class="aside-group"><span class="aside-label">${t('a.lim')}</span>
+  gov: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${[1,2,3,4,5].map(i=>asideItem(docIcon,'a.lim.'+i,'a.tag.fora','tip')).join('')}
   </div>`,
-  setup: () => `<div class="aside-group"><span class="aside-label">${t('a.ent')}</span>
+  setup: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${asideItem(docIcon,'a.setup.1','a.tag.doc','doc')}
     ${asideItem(linkIcon,'a.setup.2','a.tag.link','link')}
   </div>`,
-  infra: () => `<div class="aside-group"><span class="aside-label">${t('a.ent')}</span>
+  infra: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${asideItem(linkIcon,'a.infra.1','a.tag.link','link')}
   </div>`,
-  metodo: () => `<div class="aside-group"><span class="aside-label">${t('a.mat')}</span>
+  metodo: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${[1,2,3,4,5].map(i=>asideItem(docIcon,'a.metodo.'+i,'a.tag.doc','doc')).join('')}
   </div>`,
-  ferramentas: () => `<div class="aside-group"><span class="aside-label">${t('a.ent')}</span>
+  ferramentas: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${asideItem(linkIcon,'a.ferr.1','a.tag.link','link')}
     ${asideItem(linkIcon,'a.ferr.2','a.tag.link','link')}
   </div>`,
-  partic: () => `<div class="aside-group"><span class="aside-label">${t('a.ent')}</span>
+  partic: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${asideItem(docIcon,'a.partic.1','a.tag.doc','doc')}
     ${asideItem(docIcon,'a.partic.2','a.tag.doc','doc')}
   </div>`,
-  aval: () => `<div class="aside-group"><span class="aside-label">${t('a.ent')}</span>
-    ${asideItem(docIcon,'a.aval.1','a.tag.doc','doc')}
-    ${asideItem(docIcon,'a.aval.2','a.tag.doc','doc')}
-    ${asideItem(docIcon,'a.aval.3','a.tag.doc','doc')}
+  aval: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
+    ${asideItem(docIcon,'a.aval.1','a.tag.doc','doc','https://docs.google.com/spreadsheets/d/14mSsSjDgUqkGaCFk4A3PUFcpyBWJLY28/edit?gid=1997125456#gid=1997125456')}
+    ${asideItem(dashIcon,'a.aval.2','a.tag.dash','dash','https://exproblox.report')}
+    ${asideItem(docIcon,'a.aval.3','a.tag.doc','doc','https://docs.google.com/spreadsheets/d/1564MpGH7p1I8ROJpOthbbZh_kSN3JY3M/edit?gid=1467062020#gid=1467062020')}
+  </div>`,
+  expansao: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
+    ${asideItem(linkIcon,'a.exp.1','a.tag.link','link','https://drive.google.com/drive/folders/1UBY7qMsBdpHJ8YTZv7HTWcZLEUu4ILQs?usp=share_link')}
   </div>`,
   empty: () => ''
 };
@@ -390,7 +388,7 @@ const TRANSLATIONS = {
     'n.visao':'Visão geral','n.pilares':'Pilares','n.teoria':'Teoria da mudança',
     'n.gov':'Governança','n.setup':'Setup','n.evento':'Evento presencial',
     'n.infra':'Infraestrutura','n.metodo':'Metodologia','n.ferr':'Ferramentas',
-    'n.partic':'Participantes','n.com':'Comunidade','n.aval':'Avaliação','n.exp':'Expansão',
+    'n.partic':'Participantes','n.com':'Continuidade','n.aval':'Avaliação','n.exp':'Expansão',
     // Footer
     'foot.brand':'Expedição Roblox 2026','foot.note':'Área de relacionamento com parceiros',
     // Theme/lang labels
@@ -413,16 +411,18 @@ const TRANSLATIONS = {
     'b.toc.t3':'Impacto esperado','b.toc.d3':'Democratização da criação digital em novos territórios, formação de uma geração de criadores e expansão do ecossistema Roblox na América Latina.',
     // Governança
     'b.gov.ct':'Equipe Central','b.gov.lt':'Parceiro Local',
-    'b.gov.c1':'Desenvolver e atualizar metodologia, conteúdos e atividades',
-    'b.gov.c2':'Produzir slides, guias, canvas, templates, formulários e relatórios padrão',
-    'b.gov.c3':'Manter Plugin Oficial, Discord global, biblioteca de conteúdos e ferramentas',
-    'b.gov.c4':'Formar facilitadores e compartilhar boas práticas',
-    'b.gov.c5':'Monitorar qualidade, consolidar aprendizados e atualizar o playbook',
-    'b.gov.l1':'Atrair participantes e articular escolas, organizações e comunidades locais',
-    'b.gov.l2':'Cuidar de infraestrutura, logística, credenciamento e execução local',
-    'b.gov.l3':'Identificar, selecionar e gerir facilitadores locais',
-    'b.gov.l4':'Ativar Discord local, comunicação contínua e lideranças locais',
-    'b.gov.l5':'Aplicar pesquisas, coletar indicadores, registrar evidências e produzir relatórios',
+    'b.gov.c1':'Adaptar arquitetura pedagógica, plugins, conteúdo web e materiais ao contexto local, com pipeline de IA e validação por especialistas',
+    'b.gov.c2':'Definir diretrizes de execução, padrões de avaliação e rubricas de qualidade para atividades locais e Game Jams',
+    'b.gov.c3':'Hospedar e distribuir o Learning Environment (plugin oficial) e os fluxos de aprendizagem guiados',
+    'b.gov.c4':'Gerir o roadmap do projeto, com monitoramento remoto contínuo, syncs periódicos e acompanhamento de indicadores',
+    'b.gov.c5':'Enviar um facilitador central a dois eventos presenciais para supervisão de qualidade e calibração in loco',
+    'b.gov.c6':'Consolidar dados de campo, métricas e indicadores em um relatório global de impacto unificado',
+    'b.gov.l1':'Liderar recrutamento, mobilização de participantes e engajamento da comunidade (13–18 anos, famílias e educadores)',
+    'b.gov.l2':'Ativar escolas, instituições técnicas e redes públicas de educação (como PILARES e UTOPÍAS)',
+    'b.gov.l3':'Garantir o público mínimo por evento (≥50 na Cidade do México e ≥25 em sedes regionais) nas cinco ativações locais',
+    'b.gov.l4':'Mapear e articular instituições e gestores públicos (SEP, SEDECO e comissões locais de educação)',
+    'b.gov.l5':'Executar logística, operação das sedes e sessões de engajamento das famílias',
+    'b.gov.l6':'Recrutar e treinar facilitadores locais e coletar dados de presença, perfil e "net new creators" para a equipe central',
     // Setup
     'b.setup.w1':'60 dias antes','b.setup.t1':'Definição do local, data e planejamento de comunicação',
     'b.setup.w2':'30 dias antes','b.setup.t2':'Abertura das inscrições e divulgação local',
@@ -458,18 +458,24 @@ const TRANSLATIONS = {
     'b.com.l1':'Fase 1','b.com.t1':'Construção','b.com.l2':'Fase 2','b.com.t2':'Experimentação','b.com.l3':'Fase 3','b.com.t3':'Escala',
     'b.com.c1':'Eventos presenciais','b.com.c2':'Discord ativo','b.com.c3':'Formação de facilitadores','b.com.c4':'Hábitos de participação',
     'b.com.e1':'Desafios mensais','b.com.e2':'Eventos online','b.com.e3':'Pilotos de Game Jams',
-    'b.com.s1':'Calendário anual','b.com.s2':'Game Jams recorrentes','b.com.s3':'Trilhas de progressão','b.com.s4':'Premiações',
+    'b.com.s1':'Engajamento no plugin','b.com.s2':'Uso do Builder como porta de entrada no universo da criação','b.com.s3':'Adaptação para uso do Expedição Roblox Studio','b.com.s4':'Sustentação de parcerias',
     // Avaliação
     'b.aval.t1':'Pesquisa de Feedback','b.aval.d1':'Coleta a percepção dos participantes sobre experiência, clareza, satisfação e valor percebido ao final do evento.',
     'b.aval.t2':'Relatório Pós-Evento','b.aval.d2':'Consolida o retrato narrativo e operacional da edição, com contexto, destaques, evidências e principais aprendizados.',
     'b.aval.t3':'Planilha de Indicadores','b.aval.d3':'Organiza os dados quantitativos obrigatórios da edição e serve como base objetiva para leitura de desempenho e comparação.',
     // Expansão
-    'b.exp.s1':'Definir estratégia de comunidade local','b.exp.s2':'Disponibilizar acesso ao Discord',
-    'b.exp.s3':'Disponibilizar acesso ao Plugin Oficial','b.exp.s4':'Disponibilizar acesso ao Roblox Studio Web',
-    'b.exp.s5':'Adaptar conteúdos audiovisuais','b.exp.s6':'Formar facilitadores',
-    'b.exp.s7':'Realizar pilotos locais','b.exp.s8':'Consolidar aprendizados',
-    'b.exp.s9':'Fortalecer a comunidade','b.exp.s10':'Escalar o programa',
+    'b.exp.head':'Próximos passos para a expansão no México',
+    'b.exp.s1':'Revisão e adaptação dos materiais pedagógicos, comunicacionais e ferramentas',
+    'b.exp.m1':'Site','b.exp.m2':'Discord','b.exp.m3':'Plugin Oficial',
+    'b.exp.m4':'Roblox Studio Web','b.exp.m5':'Conteúdo audiovisual','b.exp.m6':'Material de comunicação',
+    'b.exp.s2':'Definir datas e locais de mobilização',
+    'b.exp.s3':'Formar facilitadores',
+    'b.exp.s4':'Execução dos pilotos locais',
+    'b.exp.s5':'Consolidar aprendizados da primeira empreitada',
     // Aside labels
+    'a.ref':'Referências',
+    'a.ref.site':'Site da Expedição (Brasil)','a.ref.video':'Vídeo manifesto','a.ref.report':'Relatório Brasil','a.ref.miv':'Manual da marca (MIV)',
+    'a.tag.video':'Vídeo',
     'a.res':'Resultados esperados','a.ins':'Insumos da equipe central','a.lim':'Limites do parceiro',
     'a.ent':'Entregas relacionadas','a.mat':'Materiais oficiais',
     // Aside items
@@ -480,11 +486,12 @@ const TRANSLATIONS = {
     'a.ins.7':'Discord','a.ins.8':'Roblox Studio Web','a.ins.9':'Biblioteca de conteúdos','a.ins.10':'Capacitação de facilitadores',
     'a.lim.1':'Criar ou alterar a metodologia','a.lim.2':'Desenvolver materiais pedagógicos paralelos',
     'a.lim.3':'Produzir versões não oficiais dos conteúdos','a.lim.4':'Desenvolver ferramentas tecnológicas','a.lim.5':'Alterar o framework sem a Equipe Central',
-    'a.tag.doc':'Documento','a.tag.link':'Link externo','a.tag.result':'Resultado','a.tag.fora':'Fora do escopo',
+    'a.tag.doc':'Documento','a.tag.link':'Link externo','a.tag.result':'Resultado','a.tag.fora':'Fora do escopo','a.tag.dash':'Dashboard',
+    'a.exp.1':'Repositório México',
     'a.setup.1':'Guia de Operação do Evento','a.setup.2':'Modelo de Agenda',
     'a.ferr.1':'Plugin Oficial e documentação','a.ferr.2':'Biblioteca de conteúdo',
     'a.partic.1':'Materiais de Comunicação','a.partic.2':'Materiais de Divulgação',
-    'a.aval.1':'Pesquisa de Feedback','a.aval.2':'Relatório Pós-Evento','a.aval.3':'Planilha de Indicadores',
+    'a.aval.1':'Pesquisa de Feedback','a.aval.2':'Relatório','a.aval.3':'Planilha de Indicadores',
     'a.infra.1':'Guia de Infraestrutura',
     'a.metodo.1':'Canvas Oficial','a.metodo.2':'Guia do Facilitador','a.metodo.3':'Slides Oficiais','a.metodo.4':'Exemplos preenchidos','a.metodo.5':'Arquivos editáveis',
   },
@@ -493,7 +500,7 @@ const TRANSLATIONS = {
     'n.visao':'Overview','n.pilares':'Pillars','n.teoria':'Theory of Change',
     'n.gov':'Governance','n.setup':'Setup','n.evento':'In-person Event',
     'n.infra':'Infrastructure','n.metodo':'Methodology','n.ferr':'Tools',
-    'n.partic':'Participants','n.com':'Community','n.aval':'Evaluation','n.exp':'Expansion',
+    'n.partic':'Participants','n.com':'Continuity','n.aval':'Evaluation','n.exp':'Expansion',
     'foot.brand':'Roblox Expedition 2026','foot.note':'Partner relations area',
     'theme.tolight':'Light mode','theme.todark':'Dark mode',
     'b.visao.pub':'Audiences involved','b.visao.eco':'Roblox Ecosystem',
@@ -510,16 +517,18 @@ const TRANSLATIONS = {
     'b.toc.t2':'Immediate results','b.toc.d2':'Participants develop projects and gain confidence to keep creating. Facilitators expand capacity to lead practical experiences. Communities form local learning networks.',
     'b.toc.t3':'Expected impact','b.toc.d3':'Democratization of digital creation in new territories, formation of a generation of creators and expansion of the Roblox ecosystem in Latin America.',
     'b.gov.ct':'Central Team','b.gov.lt':'Local Partner',
-    'b.gov.c1':'Develop and update methodology, content and activities',
-    'b.gov.c2':'Produce slides, guides, canvas, templates, forms and standard reports',
-    'b.gov.c3':'Maintain Official Plugin, global Discord, content library and tools',
-    'b.gov.c4':'Train facilitators and share best practices',
-    'b.gov.c5':'Monitor quality, consolidate learnings and update the playbook',
-    'b.gov.l1':'Attract participants and engage local schools, organizations and communities',
-    'b.gov.l2':'Handle infrastructure, logistics, accreditation and local execution',
-    'b.gov.l3':'Identify, select and manage local facilitators',
-    'b.gov.l4':'Activate local Discord, continuous communication and local leaders',
-    'b.gov.l5':'Apply surveys, collect indicators, record evidence and produce reports',
+    'b.gov.c1':'Adapt pedagogical architecture, plugins, web content and materials to the local context, with an AI pipeline and specialist validation',
+    'b.gov.c2':'Define execution guidelines, evaluation standards and quality rubrics for local activities and Game Jams',
+    'b.gov.c3':'Host and distribute the Learning Environment (official plugin) and the guided learning pathways',
+    'b.gov.c4':'Manage the project roadmap, with ongoing remote monitoring, periodic syncs and indicator tracking',
+    'b.gov.c5':'Deploy a central facilitator to two in-person events for quality oversight and on-site calibration',
+    'b.gov.c6':'Consolidate field data, metrics and indicators into a single unified global impact report',
+    'b.gov.l1':'Lead recruitment, participant mobilization and community outreach (ages 13–18, families and educators)',
+    'b.gov.l2':'Activate schools, technical institutions and public education networks (such as PILARES and UTOPÍAS)',
+    'b.gov.l3':'Ensure minimum attendance per event (≥50 in Mexico City and ≥25 at regional venues) across the five local activations',
+    'b.gov.l4':'Map and engage institutions and policymakers (SEP, SEDECO and local education commissions)',
+    'b.gov.l5':'Execute logistics, venue operations and family engagement sessions',
+    'b.gov.l6':'Recruit and train local facilitators and collect attendance, demographic and "net new creator" data for the central team',
     'b.setup.w1':'60 days before','b.setup.t1':'Venue, date and communication planning',
     'b.setup.w2':'30 days before','b.setup.t2':'Registration opening and local promotion',
     'b.setup.w3':'15 days before','b.setup.t3':'Participant confirmation and infrastructure tests',
@@ -547,15 +556,21 @@ const TRANSLATIONS = {
     'b.com.l1':'Phase 1','b.com.t1':'Building','b.com.l2':'Phase 2','b.com.t2':'Experimentation','b.com.l3':'Phase 3','b.com.t3':'Scale',
     'b.com.c1':'In-person events','b.com.c2':'Active Discord','b.com.c3':'Facilitator training','b.com.c4':'Participation habits',
     'b.com.e1':'Monthly challenges','b.com.e2':'Online events','b.com.e3':'Game Jam pilots',
-    'b.com.s1':'Annual calendar','b.com.s2':'Recurring Game Jams','b.com.s3':'Progression tracks','b.com.s4':'Awards',
+    'b.com.s1':'Plugin engagement','b.com.s2':'Using the Builder as a gateway to the creation universe','b.com.s3':'Adaptation for using Expedição Roblox Studio','b.com.s4':'Sustaining partnerships',
     'b.aval.t1':'Feedback Survey','b.aval.d1':'Collects participants\' perception of experience, clarity, satisfaction and perceived value at the end of the event.',
     'b.aval.t2':'Post-Event Report','b.aval.d2':'Consolidates the narrative and operational portrait of the edition, with context, highlights, evidence and key learnings.',
     'b.aval.t3':'Indicators Spreadsheet','b.aval.d3':'Organizes the mandatory quantitative data of the edition and serves as an objective basis for performance reading and comparison.',
-    'b.exp.s1':'Define local community strategy','b.exp.s2':'Provide access to Discord',
-    'b.exp.s3':'Provide access to Official Plugin','b.exp.s4':'Provide access to Roblox Studio Web',
-    'b.exp.s5':'Adapt audiovisual content','b.exp.s6':'Train facilitators',
-    'b.exp.s7':'Run local pilots','b.exp.s8':'Consolidate learnings',
-    'b.exp.s9':'Strengthen the community','b.exp.s10':'Scale the program',
+    'b.exp.head':'Next steps for the expansion in Mexico',
+    'b.exp.s1':'Review and adaptation of pedagogical and communication materials and tools',
+    'b.exp.m1':'Site','b.exp.m2':'Discord','b.exp.m3':'Official Plugin',
+    'b.exp.m4':'Roblox Studio Web','b.exp.m5':'Audiovisual content','b.exp.m6':'Communication material',
+    'b.exp.s2':'Define mobilization dates and locations',
+    'b.exp.s3':'Train facilitators',
+    'b.exp.s4':'Run the local pilots',
+    'b.exp.s5':'Consolidate learnings from the first endeavor',
+    'a.ref':'References',
+    'a.ref.site':'Expedition site (Brazil)','a.ref.video':'Manifesto video','a.ref.report':'Brazil report','a.ref.miv':'Brand manual (MIV)',
+    'a.tag.video':'Video',
     'a.res':'Expected results','a.ins':'Central team inputs','a.lim':'Partner limits',
     'a.ent':'Related deliverables','a.mat':'Official materials',
     'a.res.1':'Introduction to digital creation','a.res.2':'Roblox project development',
@@ -565,11 +580,12 @@ const TRANSLATIONS = {
     'a.ins.7':'Discord','a.ins.8':'Roblox Studio Web','a.ins.9':'Content library','a.ins.10':'Facilitator training',
     'a.lim.1':'Create or alter the methodology','a.lim.2':'Develop parallel pedagogical materials',
     'a.lim.3':'Produce unofficial content versions','a.lim.4':'Develop technology tools','a.lim.5':'Alter the framework without the Central Team',
-    'a.tag.doc':'Document','a.tag.link':'External link','a.tag.result':'Result','a.tag.fora':'Out of scope',
+    'a.tag.doc':'Document','a.tag.link':'External link','a.tag.result':'Result','a.tag.fora':'Out of scope','a.tag.dash':'Dashboard',
+    'a.exp.1':'Mexico Repository',
     'a.setup.1':'Event Operations Guide','a.setup.2':'Agenda Template',
     'a.ferr.1':'Official Plugin and documentation','a.ferr.2':'Content library',
     'a.partic.1':'Communication Materials','a.partic.2':'Promotional Materials',
-    'a.aval.1':'Feedback Survey','a.aval.2':'Post-Event Report','a.aval.3':'Indicators Spreadsheet',
+    'a.aval.1':'Feedback Survey','a.aval.2':'Report','a.aval.3':'Indicators Spreadsheet',
     'a.infra.1':'Infrastructure Guide',
     'a.metodo.1':'Official Canvas','a.metodo.2':'Facilitator Guide','a.metodo.3':'Official Slides','a.metodo.4':'Filled examples','a.metodo.5':'Editable files',
   },
@@ -578,7 +594,7 @@ const TRANSLATIONS = {
     'n.visao':'Visión general','n.pilares':'Pilares','n.teoria':'Teoría del cambio',
     'n.gov':'Gobernanza','n.setup':'Configuración','n.evento':'Evento presencial',
     'n.infra':'Infraestructura','n.metodo':'Metodología','n.ferr':'Herramientas',
-    'n.partic':'Participantes','n.com':'Comunidad','n.aval':'Evaluación','n.exp':'Expansión',
+    'n.partic':'Participantes','n.com':'Continuidad','n.aval':'Evaluación','n.exp':'Expansión',
     'foot.brand':'Expedición Roblox 2026','foot.note':'Área de relación con socios',
     'theme.tolight':'Modo claro','theme.todark':'Modo oscuro',
     'b.visao.pub':'Públicos involucrados','b.visao.eco':'Ecosistema Roblox',
@@ -595,16 +611,18 @@ const TRANSLATIONS = {
     'b.toc.t2':'Resultados inmediatos','b.toc.d2':'Los participantes desarrollan proyectos y ganan confianza para seguir creando. Los facilitadores amplían la capacidad de conducir experiencias prácticas. Las comunidades forman redes locales de aprendizaje.',
     'b.toc.t3':'Impacto esperado','b.toc.d3':'Democratización de la creación digital en nuevos territorios, formación de una generación de creadores y expansión del ecosistema Roblox en América Latina.',
     'b.gov.ct':'Equipo Central','b.gov.lt':'Socio Local',
-    'b.gov.c1':'Desarrollar y actualizar metodología, contenidos y actividades',
-    'b.gov.c2':'Producir diapositivas, guías, canvas, plantillas, formularios e informes estándar',
-    'b.gov.c3':'Mantener Plugin Oficial, Discord global, biblioteca de contenidos y herramientas',
-    'b.gov.c4':'Formar facilitadores y compartir buenas prácticas',
-    'b.gov.c5':'Monitorear calidad, consolidar aprendizajes y actualizar el playbook',
-    'b.gov.l1':'Atraer participantes y articular escuelas, organizaciones y comunidades locales',
-    'b.gov.l2':'Gestionar infraestructura, logística, acreditación y ejecución local',
-    'b.gov.l3':'Identificar, seleccionar y gestionar facilitadores locales',
-    'b.gov.l4':'Activar Discord local, comunicación continua y liderazgos locales',
-    'b.gov.l5':'Aplicar encuestas, recopilar indicadores, registrar evidencias y producir informes',
+    'b.gov.c1':'Adaptar la arquitectura pedagógica, plugins, contenido web y materiales al contexto local, con pipeline de IA y validación por especialistas',
+    'b.gov.c2':'Definir directrices de ejecución, estándares de evaluación y rúbricas de calidad para actividades locales y Game Jams',
+    'b.gov.c3':'Alojar y distribuir el Learning Environment (plugin oficial) y las rutas de aprendizaje guiadas',
+    'b.gov.c4':'Gestionar el roadmap del proyecto, con monitoreo remoto continuo, syncs periódicos y seguimiento de indicadores',
+    'b.gov.c5':'Enviar un facilitador central a dos eventos presenciales para supervisión de calidad y calibración in situ',
+    'b.gov.c6':'Consolidar datos de campo, métricas e indicadores en un informe global de impacto unificado',
+    'b.gov.l1':'Liderar el reclutamiento, la movilización de participantes y el alcance comunitario (13–18 años, familias y educadores)',
+    'b.gov.l2':'Activar escuelas, instituciones técnicas y redes públicas de educación (como PILARES y UTOPÍAS)',
+    'b.gov.l3':'Garantizar la asistencia mínima por evento (≥50 en Ciudad de México y ≥25 en sedes regionales) en las cinco activaciones locales',
+    'b.gov.l4':'Mapear y articular instituciones y responsables públicos (SEP, SEDECO y comisiones locales de educación)',
+    'b.gov.l5':'Ejecutar logística, operación de sedes y sesiones de involucramiento de las familias',
+    'b.gov.l6':'Reclutar y capacitar facilitadores locales y recopilar datos de asistencia, perfil y "net new creators" para el equipo central',
     'b.setup.w1':'60 días antes','b.setup.t1':'Definición del lugar, fecha y planificación de comunicación',
     'b.setup.w2':'30 días antes','b.setup.t2':'Apertura de inscripciones y difusión local',
     'b.setup.w3':'15 días antes','b.setup.t3':'Confirmación de participantes y pruebas de infraestructura',
@@ -632,15 +650,21 @@ const TRANSLATIONS = {
     'b.com.l1':'Fase 1','b.com.t1':'Construcción','b.com.l2':'Fase 2','b.com.t2':'Experimentación','b.com.l3':'Fase 3','b.com.t3':'Escala',
     'b.com.c1':'Eventos presenciales','b.com.c2':'Discord activo','b.com.c3':'Formación de facilitadores','b.com.c4':'Hábitos de participación',
     'b.com.e1':'Desafíos mensuales','b.com.e2':'Eventos en línea','b.com.e3':'Pilotos de Game Jams',
-    'b.com.s1':'Calendario anual','b.com.s2':'Game Jams recurrentes','b.com.s3':'Rutas de progresión','b.com.s4':'Premiaciones',
+    'b.com.s1':'Participación en el plugin','b.com.s2':'Uso del Builder como puerta de entrada al universo de la creación','b.com.s3':'Adaptación para el uso de Expedición Roblox Studio','b.com.s4':'Sostenimiento de alianzas',
     'b.aval.t1':'Encuesta de Retroalimentación','b.aval.d1':'Recoge la percepción de los participantes sobre experiencia, claridad, satisfacción y valor percibido al final del evento.',
     'b.aval.t2':'Informe Post-Evento','b.aval.d2':'Consolida el retrato narrativo y operacional de la edición, con contexto, destacados, evidencias y principales aprendizajes.',
     'b.aval.t3':'Planilla de Indicadores','b.aval.d3':'Organiza los datos cuantitativos obligatorios de la edición y sirve como base objetiva para lectura de desempeño y comparación.',
-    'b.exp.s1':'Definir estrategia de comunidad local','b.exp.s2':'Proporcionar acceso a Discord',
-    'b.exp.s3':'Proporcionar acceso al Plugin Oficial','b.exp.s4':'Proporcionar acceso a Roblox Studio Web',
-    'b.exp.s5':'Adaptar contenidos audiovisuales','b.exp.s6':'Formar facilitadores',
-    'b.exp.s7':'Realizar pilotos locales','b.exp.s8':'Consolidar aprendizajes',
-    'b.exp.s9':'Fortalecer la comunidad','b.exp.s10':'Escalar el programa',
+    'b.exp.head':'Próximos pasos para la expansión en México',
+    'b.exp.s1':'Revisión y adaptación de los materiales pedagógicos, comunicacionales y herramientas',
+    'b.exp.m1':'Sitio','b.exp.m2':'Discord','b.exp.m3':'Plugin Oficial',
+    'b.exp.m4':'Roblox Studio Web','b.exp.m5':'Contenido audiovisual','b.exp.m6':'Material de comunicación',
+    'b.exp.s2':'Definir fechas y lugares de movilización',
+    'b.exp.s3':'Formar facilitadores',
+    'b.exp.s4':'Ejecución de los pilotos locales',
+    'b.exp.s5':'Consolidar aprendizajes de la primera iniciativa',
+    'a.ref':'Referencias',
+    'a.ref.site':'Sitio de la Expedición (Brasil)','a.ref.video':'Video manifiesto','a.ref.report':'Informe Brasil','a.ref.miv':'Manual de marca (MIV)',
+    'a.tag.video':'Video',
     'a.res':'Resultados esperados','a.ins':'Insumos del equipo central','a.lim':'Límites del socio',
     'a.ent':'Entregas relacionadas','a.mat':'Materiales oficiales',
     'a.res.1':'Introducción a la creación digital','a.res.2':'Desarrollo de proyectos Roblox',
@@ -650,11 +674,12 @@ const TRANSLATIONS = {
     'a.ins.7':'Discord','a.ins.8':'Roblox Studio Web','a.ins.9':'Biblioteca de contenidos','a.ins.10':'Capacitación de facilitadores',
     'a.lim.1':'Crear o alterar la metodología','a.lim.2':'Desarrollar materiales pedagógicos paralelos',
     'a.lim.3':'Producir versiones no oficiales de los contenidos','a.lim.4':'Desarrollar herramientas tecnológicas','a.lim.5':'Alterar el framework sin el Equipo Central',
-    'a.tag.doc':'Documento','a.tag.link':'Enlace externo','a.tag.result':'Resultado','a.tag.fora':'Fuera del alcance',
+    'a.tag.doc':'Documento','a.tag.link':'Enlace externo','a.tag.result':'Resultado','a.tag.fora':'Fuera del alcance','a.tag.dash':'Dashboard',
+    'a.exp.1':'Repositorio México',
     'a.setup.1':'Guía de Operación del Evento','a.setup.2':'Modelo de Agenda',
     'a.ferr.1':'Plugin Oficial y documentación','a.ferr.2':'Biblioteca de contenido',
     'a.partic.1':'Materiales de Comunicación','a.partic.2':'Materiales de Divulgación',
-    'a.aval.1':'Encuesta de Retroalimentación','a.aval.2':'Informe Post-Evento','a.aval.3':'Planilla de Indicadores',
+    'a.aval.1':'Encuesta de Retroalimentación','a.aval.2':'Informe','a.aval.3':'Planilla de Indicadores',
     'a.infra.1':'Guía de Infraestructura',
     'a.metodo.1':'Canvas Oficial','a.metodo.2':'Guía del Facilitador','a.metodo.3':'Diapositivas Oficiales','a.metodo.4':'Ejemplos completados','a.metodo.5':'Archivos editables',
   }
