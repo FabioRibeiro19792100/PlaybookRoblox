@@ -35,13 +35,13 @@ export const PAGES = [
   {
     id: 'setup',
     group: { pt:'Planning & Execution', en:'Planning & Execution', es:'Planificación & Ejecución' },
-    title: { pt:'Setup', en:'Setup', es:'Configuración' },
+    title: { pt:'Setup México', en:'Setup Mexico', es:'Setup México' },
     img: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&auto=format&fit=crop',
-    caputEyebrow: { pt:'O evento se decide antes dele', en:'The event is decided before it happens', es:'El evento se decide antes de que suceda' },
+    caputEyebrow: { pt:'Checklist pré-operacional — Parceiro Local', en:'Pre-operational checklist — Local Partner', es:'Checklist preoperativo — Socio Local' },
     caputTitle: { pt:'O evento se decide antes dele', en:'The event is decided before it happens', es:'El evento se decide antes de que suceda' },
-    caputDesc: { pt:'As semanas que antecedem o evento concentram as escolhas que definem sua qualidade. Cinco marcos sucessivos organizam o caminho do primeiro contato à véspera.', en:'The weeks before the event concentrate the choices that define its quality. Five successive milestones organize the path from first contact to eve.', es:'Las semanas previas al evento concentran las decisiones que definen su calidad.' },
+    caputDesc: { pt:'Marque cada tarefa conforme avança. O estado é compartilhado entre a equipe e fica salvo automaticamente.', en:'Check off each task as you progress. The state is shared across the team and saved automatically.', es:'Marca cada tarea a medida que avanzas. El estado se comparte entre el equipo y se guarda automáticamente.' },
     body: 'setup',
-    aside: 'setup'
+    aside: 'empty'
   },
   {
     id: 'evento',
@@ -251,9 +251,9 @@ const BODIES = {
         <div class="tool-title">${t('b.ferr.t4')} <span class="tool-badge">${t('b.ferr.local')}</span></div>
         <div class="tool-desc">${t('b.ferr.d4')}</div>
         <div class="biblio-cards">
-          <a class="biblio-card" href="https://roblox.mastertech.com.br/biblioteca/pais" target="_blank" rel="noopener"><img src="/media/biblioteca/pais.png" alt="${t('b.ferr.bib1')}" loading="lazy"><span class="biblio-card-label">${t('b.ferr.bib1')}</span></a>
-          <a class="biblio-card" href="https://roblox.mastertech.com.br/biblioteca/educadores" target="_blank" rel="noopener"><img src="/media/biblioteca/educadores.png" alt="${t('b.ferr.bib2')}" loading="lazy"><span class="biblio-card-label">${t('b.ferr.bib2')}</span></a>
-          <a class="biblio-card" href="https://roblox.mastertech.com.br/biblioteca/criadores" target="_blank" rel="noopener"><img src="/media/biblioteca/criadores.png" alt="${t('b.ferr.bib3')}" loading="lazy"><span class="biblio-card-label">${t('b.ferr.bib3')}</span></a>
+          <a class="biblio-card" href="https://roblox.mastertech.com.br/biblioteca/pais" target="_blank" rel="noopener"><img src="/media/biblioteca/pais.jpg" alt="${t('b.ferr.bib1')}" loading="lazy"><span class="biblio-card-label">${t('b.ferr.bib1')}</span></a>
+          <a class="biblio-card" href="https://roblox.mastertech.com.br/biblioteca/educadores" target="_blank" rel="noopener"><img src="/media/biblioteca/educadores.jpg" alt="${t('b.ferr.bib2')}" loading="lazy"><span class="biblio-card-label">${t('b.ferr.bib2')}</span></a>
+          <a class="biblio-card" href="https://roblox.mastertech.com.br/biblioteca/criadores" target="_blank" rel="noopener"><img src="/media/biblioteca/criadores.jpg" alt="${t('b.ferr.bib3')}" loading="lazy"><span class="biblio-card-label">${t('b.ferr.bib3')}</span></a>
         </div>
       </div></div>
     </div>`,
@@ -381,7 +381,7 @@ const TRANSLATIONS = {
     'g.dir':'Diretrizes do projeto','g.plan':'Planning & Execution','g.out':'Outcomes',
     // Rail items
     'n.visao':'Visão geral','n.pilares':'Pilares','n.teoria':'Teoria da mudança',
-    'n.gov':'Governança','n.setup':'Setup','n.evento':'Evento presencial',
+    'n.gov':'Governança','n.setup':'Setup México','n.evento':'Evento presencial',
     'n.infra':'Infraestrutura','n.metodo':'Metodologia','n.ferr':'Recursos Pedagógicos',
     'n.partic':'Participantes','n.com':'Continuidade','n.aval':'Avaliação','n.exp':'Expansão',
     // Footer
@@ -495,7 +495,7 @@ const TRANSLATIONS = {
   en: {
     'g.dir':'Project Guidelines','g.plan':'Planning & Execution','g.out':'Outcomes',
     'n.visao':'Overview','n.pilares':'Pillars','n.teoria':'Theory of Change',
-    'n.gov':'Governance','n.setup':'Setup','n.evento':'In-person Event',
+    'n.gov':'Governance','n.setup':'Setup Mexico','n.evento':'In-person Event',
     'n.infra':'Infrastructure','n.metodo':'Methodology','n.ferr':'Pedagogical Resources',
     'n.partic':'Participants','n.com':'Continuity','n.aval':'Evaluation','n.exp':'Expansion',
     'foot.brand':'Roblox Expedition 2026','foot.note':'Partner relations area',
@@ -591,7 +591,7 @@ const TRANSLATIONS = {
   es: {
     'g.dir':'Directrices del proyecto','g.plan':'Planificación & Ejecución','g.out':'Resultados',
     'n.visao':'Visión general','n.pilares':'Pilares','n.teoria':'Teoría del cambio',
-    'n.gov':'Gobernanza','n.setup':'Configuración','n.evento':'Evento presencial',
+    'n.gov':'Gobernanza','n.setup':'Setup México','n.evento':'Evento presencial',
     'n.infra':'Infraestructura','n.metodo':'Metodología','n.ferr':'Recursos Pedagógicos',
     'n.partic':'Participantes','n.com':'Continuidad','n.aval':'Evaluación','n.exp':'Expansión',
     'foot.brand':'Expedición Roblox 2026','foot.note':'Área de relación con socios',

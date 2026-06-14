@@ -238,6 +238,33 @@
     .biblio-card img { width: 100%; height: 104px; object-fit: cover; display: block; background: var(--border); }
     .biblio-card-label { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; color: var(--text); padding: 8px 10px 10px; }
 
+    /* Setup México checklist */
+    .ckl { display: flex; flex-direction: column; gap: 26px; }
+    .ckl-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; position: sticky; top: 0; background: var(--bg); padding: 4px 0 10px; z-index: 2; border-bottom: 1px solid var(--border); }
+    .ckl-progress { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 200px; }
+    .ckl-progress-bar { flex: 1; height: 6px; border-radius: 3px; background: var(--border); overflow: hidden; max-width: 320px; }
+    .ckl-progress-bar span { display: block; height: 100%; background: var(--blue); border-radius: 3px; transition: width .25s; }
+    .ckl-progress-label { font-family: 'Space Grotesk', sans-serif; font-size: 12.6px; font-weight: 700; color: var(--muted); white-space: nowrap; }
+    .ckl-sync { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .03em; color: var(--muted); white-space: nowrap; }
+    .ckl-sync.synced { color: var(--blue); }
+    .ckl-sync.saving { color: var(--amber); }
+    .ckl-sync.offline { color: var(--red); }
+    .ckl-section { display: flex; flex-direction: column; }
+    .ckl-section-title { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .ckl-section-num { font-size: 12px; font-weight: 700; color: var(--red); }
+    .ckl-table { display: flex; flex-direction: column; }
+    .ckl-row { display: grid; grid-template-columns: 1.6fr 1.5fr 0.8fr 54px; gap: 14px; align-items: center; padding: 11px 8px; border-bottom: 1px solid var(--border); cursor: pointer; }
+    .ckl-row:hover:not(.ckl-row-head) { background: var(--surface); }
+    .ckl-row-head { cursor: default; border-bottom: 1px solid var(--text); }
+    .ckl-row-head > div { font-family: 'Space Grotesk', sans-serif; font-size: 10.3px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .ckl-task { font-size: 14px; color: var(--text); line-height: 1.45; font-weight: 500; }
+    .ckl-deliv { font-size: 13.2px; color: var(--muted); line-height: 1.45; }
+    .ckl-resp { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; color: var(--text); }
+    .ckl-check-col { display: flex; justify-content: center; }
+    .ckl-row input[type="checkbox"] { width: 17px; height: 17px; accent-color: var(--blue); cursor: pointer; }
+    .ckl-row.is-done { opacity: .65; }
+    .ckl-row.is-done .ckl-task { text-decoration: line-through; color: var(--muted); }
+
     /* Community phases */
     .phase-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
     .phase-card { border-top: 2px solid var(--border); padding-top: 14px; display: flex; flex-direction: column; }

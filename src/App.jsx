@@ -6,6 +6,7 @@ import {
   renderAside,
   renderBody,
 } from "./playbookData";
+import SetupChecklist from "./SetupChecklist";
 
 const RAIL_GROUPS = [
   { labelKey: "g.dir", items: ["visao", "pilares", "gov"] },
@@ -334,7 +335,11 @@ export default function App() {
           </div>
 
           <div className="body-slot" ref={bodySlotRef}>
-            <div dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+            {currentPage.id === "setup" ? (
+              <SetupChecklist lang={lang} />
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+            )}
           </div>
         </main>
 
