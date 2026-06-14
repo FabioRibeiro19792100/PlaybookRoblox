@@ -50,7 +50,7 @@ export const PAGES = [
     img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&auto=format&fit=crop',
     caputEyebrow: { pt:'Um dia em blocos', en:'One day in blocks', es:'Un día en bloques' },
     caputTitle: { pt:'Um dia em blocos', en:'One day in blocks', es:'Un día en bloques' },
-    caputDesc: { pt:'A agenda oficial distribui cinco horas de experiência em seis blocos, com o tempo de criação como núcleo protegido. As durações servem de referência e admitem ajuste fino ao contexto local.', en:'The official agenda distributes five hours of experience into six blocks, with creation time as the protected core.', es:'La agenda oficial distribuye cinco horas de experiencia en seis bloques, con el tiempo de creación como núcleo protegido.' },
+    caputDesc: { pt:'A agenda oficial distribui quatro horas de experiência em cinco blocos, com o tempo de criação como núcleo protegido. As durações servem de referência e admitem ajuste fino ao contexto local.', en:'The official agenda distributes four hours of experience into five blocks, with creation time as the protected core.', es:'La agenda oficial distribuye cuatro horas de experiencia en cinco bloques, con el tiempo de creación como núcleo protegido.' },
     body: 'evento',
     aside: 'empty'
   },
@@ -74,29 +74,18 @@ export const PAGES = [
     caputTitle: { pt:'A mesma experiência em qualquer território', en:'The same experience in any territory', es:'La misma experiencia en cualquier territorio' },
     caputDesc: { pt:'Os materiais oficiais carregam a pedagogia do programa e chegam prontos para uso. Com o kit em mãos, o facilitador dedica atenção integral às pessoas.', en:'The official materials carry the program pedagogy and arrive ready for use. With the kit in hand, the facilitator dedicates full attention to people.', es:'Los materiales oficiales llevan la pedagogía del programa y llegan listos para usar.' },
     body: 'metodo',
-    aside: 'metodo'
+    aside: 'empty'
   },
   {
     id: 'ferramentas',
     group: { pt:'Planning & Execution', en:'Planning & Execution', es:'Planificación & Ejecución' },
-    title: { pt:'Ferramentas', en:'Tools', es:'Herramientas' },
+    title: { pt:'Recursos Pedagógicos', en:'Pedagogical Resources', es:'Recursos Pedagógicos' },
     img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop',
     caputEyebrow: { pt:'A camada digital da jornada', en:'The digital layer of the journey', es:'La capa digital del recorrido' },
     caputTitle: { pt:'A camada digital da jornada', en:'The digital layer of the journey', es:'La capa digital del recorrido' },
     caputDesc: { pt:'Quatro ferramentas acompanham o participante antes, durante e depois do evento. Cada uma cumpre um papel específico e reduz a barreira de entrada de quem está começando.', en:'Four tools accompany the participant before, during and after the event. Each plays a specific role and reduces the barrier for those just starting.', es:'Cuatro herramientas acompañan al participante antes, durante y después del evento.' },
     body: 'ferramentas',
-    aside: 'ferramentas'
-  },
-  {
-    id: 'partic',
-    group: { pt:'Planning & Execution', en:'Planning & Execution', es:'Planificación & Ejecución' },
-    title: { pt:'Participantes', en:'Participants', es:'Participantes' },
-    img: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1200&auto=format&fit=crop',
-    caputEyebrow: { pt:'A mobilização começa no papel', en:'Mobilization starts on paper', es:'La movilización comienza en el papel' },
-    caputTitle: { pt:'A mobilização começa no papel', en:'Mobilization starts on paper', es:'La movilización comienza en el papel' },
-    caputDesc: { pt:'Inscrição, comunicação e consentimentos formam a base legal e logística do evento. Com essa base pronta, a divulgação corre em segurança.', en:'Registration, communication and consents form the legal and logistical foundation of the event.', es:'Inscripción, comunicación y consentimientos forman la base legal y logística del evento.' },
-    body: 'partic',
-    aside: 'partic'
+    aside: 'empty'
   },
   {
     id: 'comunidade',
@@ -203,9 +192,9 @@ const BODIES = {
   },
 
   evento: () => {
-    const keys = ['b.ev.a1','b.ev.a2','b.ev.a3','b.ev.a4','b.ev.a5','b.ev.a6'];
-    const mins  = [30,30,120,60,45,15];
-    const cols  = ['var(--blue)','var(--muted)','var(--amber)','var(--red)','var(--blue)','var(--muted)'];
+    const keys = ['b.ev.a1','b.ev.a2','b.ev.a3','b.ev.a5','b.ev.a6'];
+    const mins  = [30,30,120,45,15];
+    const cols  = ['var(--blue)','var(--muted)','var(--amber)','var(--red)','var(--muted)'];
     const total = mins.reduce((s,m)=>s+m,0);
     const fmt   = m => `${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}`;
     let cursor  = 0;
@@ -238,7 +227,7 @@ const BODIES = {
       </div>
       <div>
         <div class="check-col-head"><svg class="check-col-icon a" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="check-col-title">${t('b.infra.t2')}</span></div>
-        <ul class="plain-list amber"><li>${t('b.infra.f1')}</li><li>${t('b.infra.f2')}</li><li>${t('b.infra.f3')}</li><li>${t('b.infra.f4')}</li></ul>
+        <ul class="plain-list amber"><li>${t('b.infra.f5')}</li><li>${t('b.infra.f1')}</li><li>${t('b.infra.f2')}</li><li>${t('b.infra.f3')}</li><li>${t('b.infra.f4')}</li></ul>
       </div>
       <div>
         <div class="check-col-head"><svg class="check-col-icon r" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span class="check-col-title">${t('b.infra.t3')}</span></div>
@@ -248,19 +237,25 @@ const BODIES = {
 
   metodo: () => `
     <div class="mat-grid">
-      <div class="mat-item"><svg class="mat-item-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg><div class="mat-item-title">${t('b.mat.t1')}</div><div class="mat-item-desc">${t('b.mat.d1')}</div></div>
-      <div class="mat-item"><svg class="mat-item-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div class="mat-item-title">${t('b.mat.t2')}</div><div class="mat-item-desc">${t('b.mat.d2')}</div></div>
-      <div class="mat-item"><svg class="mat-item-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><div class="mat-item-title">${t('b.mat.t3')}</div><div class="mat-item-desc">${t('b.mat.d3')}</div></div>
-      <div class="mat-item"><svg class="mat-item-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><div class="mat-item-title">${t('b.mat.t4')}</div><div class="mat-item-desc">${t('b.mat.d4')}</div></div>
-      <div class="mat-item"><svg class="mat-item-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg><div class="mat-item-title">${t('b.mat.t5')}</div><div class="mat-item-desc">${t('b.mat.d5')}</div></div>
+      <a class="mat-item" href="https://drive.google.com/file/d/1EaHJOZxpAPiSbZ055daWjcMb3cVUWyv0/view?usp=sharing" target="_blank" rel="noopener"><svg class="mat-item-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg><div class="mat-item-title">${t('b.mat.t1')}</div><div class="mat-item-desc">${t('b.mat.d1')}</div></a>
+      <div class="mat-item"><svg class="mat-item-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div class="mat-item-title">${t('b.mat.t2')} <span class="mat-tbd">TBD</span></div><div class="mat-item-desc">${t('b.mat.d2')}</div></div>
+      <a class="mat-item" href="https://drive.google.com/drive/folders/1oShpkMGoY33Sm0pZIWwH0iFNr6OY85AV?usp=sharing" target="_blank" rel="noopener"><svg class="mat-item-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><div class="mat-item-title">${t('b.mat.t3')}</div><div class="mat-item-desc">${t('b.mat.d3')}</div></a>
     </div>`,
 
   ferramentas: () => `
     <div class="tool-list">
-      <div class="tool-item"><div class="tool-accent b"></div><div><div class="tool-title">Discord Oficial</div><div class="tool-desc">${t('b.ferr.d1')}</div></div></div>
-      <div class="tool-item"><div class="tool-accent a"></div><div><div class="tool-title">Plugin Oficial</div><div class="tool-desc">${t('b.ferr.d2')}</div></div></div>
-      <div class="tool-item"><div class="tool-accent r"></div><div><div class="tool-title">Roblox Studio Web</div><div class="tool-desc">${t('b.ferr.d3')}</div></div></div>
-      <div class="tool-item"><div class="tool-accent m"></div><div><div class="tool-title">${t('b.ferr.t4')}</div><div class="tool-desc">${t('b.ferr.d4')}</div></div></div>
+      <a class="tool-item" href="https://discord.gg/exproblox" target="_blank" rel="noopener"><div class="tool-accent b"></div><div><div class="tool-title">Discord Oficial</div><div class="tool-desc">${t('b.ferr.d1')}</div></div></a>
+      <a class="tool-item" href="https://create.roblox.com/store/asset/125743081126783/Expedio-Roblox" target="_blank" rel="noopener"><div class="tool-accent a"></div><div><div class="tool-title">Plugin Oficial</div><div class="tool-desc">${t('b.ferr.d2')}</div></div></a>
+      <a class="tool-item" href="https://exproblox.studio" target="_blank" rel="noopener"><div class="tool-accent r"></div><div><div class="tool-title">Roblox Studio Web <span class="tool-badge">${t('b.ferr.dev')}</span></div><div class="tool-desc">${t('b.ferr.d3')}</div></div></a>
+      <div class="tool-item"><div class="tool-accent m"></div><div>
+        <div class="tool-title">${t('b.ferr.t4')} <span class="tool-badge">${t('b.ferr.local')}</span></div>
+        <div class="tool-desc">${t('b.ferr.d4')}</div>
+        <div class="biblio-cards">
+          <a class="biblio-card" href="https://roblox.mastertech.com.br/biblioteca/pais" target="_blank" rel="noopener"><img src="/media/biblioteca/pais.png" alt="${t('b.ferr.bib1')}" loading="lazy"><span class="biblio-card-label">${t('b.ferr.bib1')}</span></a>
+          <a class="biblio-card" href="https://roblox.mastertech.com.br/biblioteca/educadores" target="_blank" rel="noopener"><img src="/media/biblioteca/educadores.png" alt="${t('b.ferr.bib2')}" loading="lazy"><span class="biblio-card-label">${t('b.ferr.bib2')}</span></a>
+          <a class="biblio-card" href="https://roblox.mastertech.com.br/biblioteca/criadores" target="_blank" rel="noopener"><img src="/media/biblioteca/criadores.png" alt="${t('b.ferr.bib3')}" loading="lazy"><span class="biblio-card-label">${t('b.ferr.bib3')}</span></a>
+        </div>
+      </div></div>
     </div>`,
 
   partic: () => `
@@ -353,7 +348,7 @@ const ASIDES = {
     ${asideItem(linkIcon,'a.setup.2','a.tag.link','link')}
   </div>`,
   infra: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
-    ${asideItem(linkIcon,'a.infra.1','a.tag.link','link')}
+    ${asideItem(linkIcon,'a.infra.1','a.tag.link','link','https://create.roblox.com/docs/pt-br/studio/setup')}
   </div>`,
   metodo: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${[1,2,3,4,5].map(i=>asideItem(docIcon,'a.metodo.'+i,'a.tag.doc','doc')).join('')}
@@ -387,7 +382,7 @@ const TRANSLATIONS = {
     // Rail items
     'n.visao':'Visão geral','n.pilares':'Pilares','n.teoria':'Teoria da mudança',
     'n.gov':'Governança','n.setup':'Setup','n.evento':'Evento presencial',
-    'n.infra':'Infraestrutura','n.metodo':'Metodologia','n.ferr':'Ferramentas',
+    'n.infra':'Infraestrutura','n.metodo':'Metodologia','n.ferr':'Recursos Pedagógicos',
     'n.partic':'Participantes','n.com':'Continuidade','n.aval':'Avaliação','n.exp':'Expansão',
     // Footer
     'foot.brand':'Expedição Roblox 2026','foot.note':'Área de relacionamento com parceiros',
@@ -431,12 +426,12 @@ const TRANSLATIONS = {
     'b.setup.w5':'1 dia antes','b.setup.t5':'Montagem do espaço e testes finais',
     // Evento
     'b.ev.a1':'Recepção e credenciamento','b.ev.a2':'Abertura','b.ev.a3':'Mão na massa',
-    'b.ev.a4':'Mentorias','b.ev.a5':'Apresentações','b.ev.a6':'Encerramento',
+    'b.ev.a4':'Mentorias','b.ev.a5':'Apresentações','b.ev.a6':'Encerramento e brindes',
     'b.ev.total':'Encerramento',
     // Infra
     'b.infra.t1':'Espaço','b.infra.t2':'Tecnologia','b.infra.t3':'Participantes',
-    'b.infra.e1':'Sala para grupos','b.infra.e2':'Área de apresentações','b.infra.e3':'Ambiente seguro e silencioso','b.infra.e4':'Acessibilidade',
-    'b.infra.f1':'Internet funcionando','b.infra.f2':'Projetor ou TV','b.infra.f3':'Sistema de som','b.infra.f4':'Extensões elétricas',
+    'b.infra.e1':'Sala com os computadores','b.infra.e2':'Área de apresentações','b.infra.e3':'Ambiente seguro e silencioso','b.infra.e4':'Acessibilidade',
+    'b.infra.f1':'Internet funcionando','b.infra.f2':'Projetor ou TV','b.infra.f3':'Sistema de som','b.infra.f4':'Extensões elétricas','b.infra.f5':'Computadores com Roblox Studio',
     'b.infra.p1':'Lista confirmada','b.infra.p2':'Formulários preenchidos','b.infra.p3':'Autorizações coletadas','b.infra.p4':'Contas Roblox configuradas',
     // Metodologia
     'b.mat.t1':'Canvas Oficial','b.mat.d1':'Estrutura visual para mapear o projeto de cada participante durante o evento.',
@@ -448,7 +443,9 @@ const TRANSLATIONS = {
     'b.ferr.d1':'Ambiente principal de comunidade, com canais locais dentro da comunidade global ou comunidades independentes por país.',
     'b.ferr.d2':'Disponível em português, inglês e espanhol, com interface simplificada, componentes educacionais e apoio ao participante.',
     'b.ferr.d3':'Disponível em português, inglês e espanhol, reduz dependência técnica e aumenta acessibilidade.',
-    'b.ferr.t4':'Biblioteca de conteúdo','b.ferr.d4':'Conteúdos para participantes e facilitadores, com estratégias de legendagem e regravação.',
+    'b.ferr.t4':'Biblioteca de conteúdo','b.ferr.d4':'Conteúdos em vídeo e recursos adicionais de aprendizagem.',
+    'b.ferr.dev':'Em desenvolvimento','b.ferr.local':'Adaptar localmente',
+    'b.ferr.bib1':'Responsáveis','b.ferr.bib2':'Educadores','b.ferr.bib3':'Jovens',
     // Participantes
     'b.partic.fh':'Formulário de inscrição','b.partic.mh':'Materiais de comunicação',
     'b.partic.f1':'Nome','b.partic.f2':'Idade','b.partic.f3':'Cidade','b.partic.f4':'Escola',
@@ -492,14 +489,14 @@ const TRANSLATIONS = {
     'a.ferr.1':'Plugin Oficial e documentação','a.ferr.2':'Biblioteca de conteúdo',
     'a.partic.1':'Materiais de Comunicação','a.partic.2':'Materiais de Divulgação',
     'a.aval.1':'Pesquisa de Feedback','a.aval.2':'Relatório','a.aval.3':'Planilha de Indicadores',
-    'a.infra.1':'Guia de Infraestrutura',
+    'a.infra.1':'Requisitos básicos para o Studio',
     'a.metodo.1':'Canvas Oficial','a.metodo.2':'Guia do Facilitador','a.metodo.3':'Slides Oficiais','a.metodo.4':'Exemplos preenchidos','a.metodo.5':'Arquivos editáveis',
   },
   en: {
     'g.dir':'Project Guidelines','g.plan':'Planning & Execution','g.out':'Outcomes',
     'n.visao':'Overview','n.pilares':'Pillars','n.teoria':'Theory of Change',
     'n.gov':'Governance','n.setup':'Setup','n.evento':'In-person Event',
-    'n.infra':'Infrastructure','n.metodo':'Methodology','n.ferr':'Tools',
+    'n.infra':'Infrastructure','n.metodo':'Methodology','n.ferr':'Pedagogical Resources',
     'n.partic':'Participants','n.com':'Continuity','n.aval':'Evaluation','n.exp':'Expansion',
     'foot.brand':'Roblox Expedition 2026','foot.note':'Partner relations area',
     'theme.tolight':'Light mode','theme.todark':'Dark mode',
@@ -535,10 +532,10 @@ const TRANSLATIONS = {
     'b.setup.w4':'7 days before','b.setup.t4':'Facilitator training and operational review',
     'b.setup.w5':'1 day before','b.setup.t5':'Space setup and final tests',
     'b.ev.a1':'Reception and accreditation','b.ev.a2':'Opening','b.ev.a3':'Hands-on',
-    'b.ev.a4':'Mentoring','b.ev.a5':'Presentations','b.ev.a6':'Closing','b.ev.total':'End',
+    'b.ev.a4':'Mentoring','b.ev.a5':'Presentations','b.ev.a6':'Closing and giveaways','b.ev.total':'End',
     'b.infra.t1':'Space','b.infra.t2':'Technology','b.infra.t3':'Participants',
-    'b.infra.e1':'Group room','b.infra.e2':'Presentation area','b.infra.e3':'Safe and quiet environment','b.infra.e4':'Accessibility',
-    'b.infra.f1':'Working internet','b.infra.f2':'Projector or TV','b.infra.f3':'Sound system','b.infra.f4':'Power extensions',
+    'b.infra.e1':'Room with the computers','b.infra.e2':'Presentation area','b.infra.e3':'Safe and quiet environment','b.infra.e4':'Accessibility',
+    'b.infra.f1':'Working internet','b.infra.f2':'Projector or TV','b.infra.f3':'Sound system','b.infra.f4':'Power extensions','b.infra.f5':'Computers with Roblox Studio',
     'b.infra.p1':'Confirmed list','b.infra.p2':'Completed forms','b.infra.p3':'Collected authorizations','b.infra.p4':'Roblox accounts configured',
     'b.mat.t1':'Official Canvas','b.mat.d1':'Visual structure to map each participant\'s project during the event.',
     'b.mat.t2':'Facilitator Guide','b.mat.d2':'Step-by-step event facilitation guide with instructions for each agenda block.',
@@ -548,7 +545,9 @@ const TRANSLATIONS = {
     'b.ferr.d1':'Main community environment, with local channels inside the global community or independent country communities.',
     'b.ferr.d2':'Available in Portuguese, English and Spanish, with simplified interface, educational components and participant support.',
     'b.ferr.d3':'Available in Portuguese, English and Spanish, reduces technical dependency and increases accessibility.',
-    'b.ferr.t4':'Content library','b.ferr.d4':'Content for participants and facilitators, with subtitling and re-recording strategies.',
+    'b.ferr.t4':'Content library','b.ferr.d4':'Video content and additional learning resources.',
+    'b.ferr.dev':'In development','b.ferr.local':'Adapt locally',
+    'b.ferr.bib1':'Guardians','b.ferr.bib2':'Educators','b.ferr.bib3':'Youth',
     'b.partic.fh':'Registration form','b.partic.mh':'Communication materials',
     'b.partic.f1':'Name','b.partic.f2':'Age','b.partic.f3':'City','b.partic.f4':'School',
     'b.partic.f5':'Phone','b.partic.f6':'Prior experience','b.partic.f7':'Image consent',
@@ -586,14 +585,14 @@ const TRANSLATIONS = {
     'a.ferr.1':'Official Plugin and documentation','a.ferr.2':'Content library',
     'a.partic.1':'Communication Materials','a.partic.2':'Promotional Materials',
     'a.aval.1':'Feedback Survey','a.aval.2':'Report','a.aval.3':'Indicators Spreadsheet',
-    'a.infra.1':'Infrastructure Guide',
+    'a.infra.1':'Studio basic requirements',
     'a.metodo.1':'Official Canvas','a.metodo.2':'Facilitator Guide','a.metodo.3':'Official Slides','a.metodo.4':'Filled examples','a.metodo.5':'Editable files',
   },
   es: {
     'g.dir':'Directrices del proyecto','g.plan':'Planificación & Ejecución','g.out':'Resultados',
     'n.visao':'Visión general','n.pilares':'Pilares','n.teoria':'Teoría del cambio',
     'n.gov':'Gobernanza','n.setup':'Configuración','n.evento':'Evento presencial',
-    'n.infra':'Infraestructura','n.metodo':'Metodología','n.ferr':'Herramientas',
+    'n.infra':'Infraestructura','n.metodo':'Metodología','n.ferr':'Recursos Pedagógicos',
     'n.partic':'Participantes','n.com':'Continuidad','n.aval':'Evaluación','n.exp':'Expansión',
     'foot.brand':'Expedición Roblox 2026','foot.note':'Área de relación con socios',
     'theme.tolight':'Modo claro','theme.todark':'Modo oscuro',
@@ -629,10 +628,10 @@ const TRANSLATIONS = {
     'b.setup.w4':'7 días antes','b.setup.t4':'Formación de facilitadores y revisión operacional',
     'b.setup.w5':'1 día antes','b.setup.t5':'Montaje del espacio y pruebas finales',
     'b.ev.a1':'Recepción y acreditación','b.ev.a2':'Apertura','b.ev.a3':'Manos a la obra',
-    'b.ev.a4':'Mentorías','b.ev.a5':'Presentaciones','b.ev.a6':'Cierre','b.ev.total':'Fin',
+    'b.ev.a4':'Mentorías','b.ev.a5':'Presentaciones','b.ev.a6':'Cierre y obsequios','b.ev.total':'Fin',
     'b.infra.t1':'Espacio','b.infra.t2':'Tecnología','b.infra.t3':'Participantes',
-    'b.infra.e1':'Sala para grupos','b.infra.e2':'Área de presentaciones','b.infra.e3':'Ambiente seguro y silencioso','b.infra.e4':'Accesibilidad',
-    'b.infra.f1':'Internet funcionando','b.infra.f2':'Proyector o TV','b.infra.f3':'Sistema de sonido','b.infra.f4':'Extensiones eléctricas',
+    'b.infra.e1':'Sala con las computadoras','b.infra.e2':'Área de presentaciones','b.infra.e3':'Ambiente seguro y silencioso','b.infra.e4':'Accesibilidad',
+    'b.infra.f1':'Internet funcionando','b.infra.f2':'Proyector o TV','b.infra.f3':'Sistema de sonido','b.infra.f4':'Extensiones eléctricas','b.infra.f5':'Computadoras con Roblox Studio',
     'b.infra.p1':'Lista confirmada','b.infra.p2':'Formularios completados','b.infra.p3':'Autorizaciones recopiladas','b.infra.p4':'Cuentas Roblox configuradas',
     'b.mat.t1':'Canvas Oficial','b.mat.d1':'Estructura visual para mapear el proyecto de cada participante durante el evento.',
     'b.mat.t2':'Guía del Facilitador','b.mat.d2':'Paso a paso de la conducción del evento, con orientaciones para cada bloque de la agenda.',
@@ -642,7 +641,9 @@ const TRANSLATIONS = {
     'b.ferr.d1':'Ambiente principal de comunidad, con canales locales dentro de la comunidad global o comunidades independientes por país.',
     'b.ferr.d2':'Disponible en portugués, inglés y español, con interfaz simplificada, componentes educativos y apoyo al participante.',
     'b.ferr.d3':'Disponible en portugués, inglés y español, reduce la dependencia técnica y aumenta la accesibilidad.',
-    'b.ferr.t4':'Biblioteca de contenido','b.ferr.d4':'Contenidos para participantes y facilitadores, con estrategias de subtitulado y regrabación.',
+    'b.ferr.t4':'Biblioteca de contenido','b.ferr.d4':'Contenidos en video y recursos adicionales de aprendizaje.',
+    'b.ferr.dev':'En desarrollo','b.ferr.local':'Adaptar localmente',
+    'b.ferr.bib1':'Responsables','b.ferr.bib2':'Educadores','b.ferr.bib3':'Jóvenes',
     'b.partic.fh':'Formulario de inscripción','b.partic.mh':'Materiales de comunicación',
     'b.partic.f1':'Nombre','b.partic.f2':'Edad','b.partic.f3':'Ciudad','b.partic.f4':'Escuela',
     'b.partic.f5':'Teléfono','b.partic.f6':'Experiencia previa','b.partic.f7':'Uso de imagen',
@@ -680,7 +681,7 @@ const TRANSLATIONS = {
     'a.ferr.1':'Plugin Oficial y documentación','a.ferr.2':'Biblioteca de contenido',
     'a.partic.1':'Materiales de Comunicación','a.partic.2':'Materiales de Divulgación',
     'a.aval.1':'Encuesta de Retroalimentación','a.aval.2':'Informe','a.aval.3':'Planilla de Indicadores',
-    'a.infra.1':'Guía de Infraestructura',
+    'a.infra.1':'Requisitos básicos para el Studio',
     'a.metodo.1':'Canvas Oficial','a.metodo.2':'Guía del Facilitador','a.metodo.3':'Diapositivas Oficiales','a.metodo.4':'Ejemplos completados','a.metodo.5':'Archivos editables',
   }
 };

@@ -4,3 +4,4 @@ dist/
 /Fotos/
 /VideoManifestoENG.mp4
 /public/media/photos/*.jpg
+.vercel

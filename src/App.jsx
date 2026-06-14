@@ -11,7 +11,7 @@ const RAIL_GROUPS = [
   { labelKey: "g.dir", items: ["visao", "pilares", "gov"] },
   {
     labelKey: "g.plan",
-    items: ["setup", "evento", "infra", "metodo", "ferramentas", "partic"],
+    items: ["setup", "evento", "infra", "metodo", "ferramentas"],
   },
   { labelKey: "g.out", items: ["comunidade", "aval", "expansao"] },
 ];
