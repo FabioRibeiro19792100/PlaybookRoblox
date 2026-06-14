@@ -91,7 +91,7 @@ export default function SetupChecklist({ lang }) {
         <div className="ckl-section" key={sec.n}>
           <div className="ckl-section-title">
             <span className="ckl-section-num">{String(sec.n).padStart(2, "0")}</span>
-            {sec.title}
+            {sec.title[lang] || sec.title.pt}
           </div>
           <div className="ckl-table">
             <div className="ckl-row ckl-row-head">
@@ -105,8 +105,8 @@ export default function SetupChecklist({ lang }) {
               const checked = !!done[id];
               return (
                 <label className={`ckl-row${checked ? " is-done" : ""}`} key={id}>
-                  <div className="ckl-task">{t.task}</div>
-                  <div className="ckl-deliv">{t.deliverable}</div>
+                  <div className="ckl-task">{t.task[lang] || t.task.pt}</div>
+                  <div className="ckl-deliv">{t.deliverable[lang] || t.deliverable.pt}</div>
                   <div className="ckl-resp">{t.resp}</div>
                   <div className="ckl-check-col">
                     <input type="checkbox" checked={checked} onChange={() => toggle(id)} />
