@@ -157,16 +157,54 @@ const BODIES = {
     </div>`,
 
   gov: () => `
-    <div class="gov-grid">
-      <div class="gov-panel central"><div class="gov-panel-title">${t('b.gov.ct')}</div>
-        <ul class="plain-list blue">
-          <li>${t('b.gov.c1')}</li><li>${t('b.gov.c2')}</li><li>${t('b.gov.c3')}</li><li>${t('b.gov.c4')}</li><li>${t('b.gov.c5')}</li><li>${t('b.gov.c6')}</li>
-        </ul>
+    <div class="gov-board">
+      <div class="gov-track central">
+        <div class="gov-track-head">
+          <span class="gov-track-kicker">${t('b.gov.ck')}</span>
+          <div class="gov-track-title">${t('b.gov.ct')}</div>
+        </div>
+        <div class="gov-card-stack">
+          <div class="gov-card">
+            <div class="gov-card-title">${t('b.gov.ch1')}</div>
+            <div class="gov-card-desc">${t('b.gov.c1')}</div>
+          </div>
+          <div class="gov-card">
+            <div class="gov-card-title">${t('b.gov.ch2')}</div>
+            <div class="gov-card-desc">${t('b.gov.c2')}</div>
+          </div>
+          <div class="gov-card">
+            <div class="gov-card-title">${t('b.gov.ch3')}</div>
+            <div class="gov-card-desc">${t('b.gov.c3')} ${t('b.gov.c4')}</div>
+          </div>
+          <div class="gov-card">
+            <div class="gov-card-title">${t('b.gov.ch4')}</div>
+            <div class="gov-card-desc">${t('b.gov.c5')} ${t('b.gov.c6')}</div>
+          </div>
+        </div>
       </div>
-      <div class="gov-panel local"><div class="gov-panel-title">${t('b.gov.lt')}</div>
-        <ul class="plain-list amber">
-          <li>${t('b.gov.l1')}</li><li>${t('b.gov.l2')}</li><li>${t('b.gov.l3')}</li><li>${t('b.gov.l4')}</li><li>${t('b.gov.l5')}</li><li>${t('b.gov.l6')}</li>
-        </ul>
+      <div class="gov-track local">
+        <div class="gov-track-head">
+          <span class="gov-track-kicker">${t('b.gov.lk')}</span>
+          <div class="gov-track-title">${t('b.gov.lt')}</div>
+        </div>
+        <div class="gov-card-stack">
+          <div class="gov-card">
+            <div class="gov-card-title">${t('b.gov.lh1')}</div>
+            <div class="gov-card-desc">${t('b.gov.l1')}</div>
+          </div>
+          <div class="gov-card">
+            <div class="gov-card-title">${t('b.gov.lh2')}</div>
+            <div class="gov-card-desc">${t('b.gov.l2')} ${t('b.gov.l4')}</div>
+          </div>
+          <div class="gov-card">
+            <div class="gov-card-title">${t('b.gov.lh3')}</div>
+            <div class="gov-card-desc">${t('b.gov.l3')} ${t('b.gov.l5')}</div>
+          </div>
+          <div class="gov-card">
+            <div class="gov-card-title">${t('b.gov.lh4')}</div>
+            <div class="gov-card-desc">${t('b.gov.l6')}</div>
+          </div>
+        </div>
       </div>
     </div>`,
 
@@ -406,6 +444,9 @@ const TRANSLATIONS = {
     'b.toc.t3':'Impacto esperado','b.toc.d3':'Democratização da criação digital em novos territórios, formação de uma geração de criadores e expansão do ecossistema Roblox na América Latina.',
     // Governança
     'b.gov.ct':'Equipe Central','b.gov.lt':'Parceiro Local',
+    'b.gov.ck':'Desenha o sistema','b.gov.lk':'Ativa o território',
+    'b.gov.ch1':'Arquitetura e conteúdo','b.gov.ch2':'Qualidade pedagógica','b.gov.ch3':'Ferramentas e acompanhamento','b.gov.ch4':'Supervisão e impacto',
+    'b.gov.lh1':'Mobilização da comunidade','b.gov.lh2':'Articulação institucional','b.gov.lh3':'Público e operação','b.gov.lh4':'Facilitadores e dados',
     'b.gov.c1':'Adaptar arquitetura pedagógica, plugins, conteúdo web e materiais ao contexto local, com pipeline de IA e validação por especialistas',
     'b.gov.c2':'Definir diretrizes de execução, padrões de avaliação e rubricas de qualidade para atividades locais e Game Jams',
     'b.gov.c3':'Hospedar e distribuir o Learning Environment (plugin oficial) e os fluxos de aprendizagem guiados',
@@ -514,6 +555,9 @@ const TRANSLATIONS = {
     'b.toc.t2':'Immediate results','b.toc.d2':'Participants develop projects and gain confidence to keep creating. Facilitators expand capacity to lead practical experiences. Communities form local learning networks.',
     'b.toc.t3':'Expected impact','b.toc.d3':'Democratization of digital creation in new territories, formation of a generation of creators and expansion of the Roblox ecosystem in Latin America.',
     'b.gov.ct':'Central Team','b.gov.lt':'Local Partner',
+    'b.gov.ck':'Designs the system','b.gov.lk':'Activates the territory',
+    'b.gov.ch1':'Architecture and content','b.gov.ch2':'Pedagogical quality','b.gov.ch3':'Tools and follow-up','b.gov.ch4':'Oversight and impact',
+    'b.gov.lh1':'Community mobilization','b.gov.lh2':'Institutional articulation','b.gov.lh3':'Attendance and operations','b.gov.lh4':'Facilitators and data',
     'b.gov.c1':'Adapt pedagogical architecture, plugins, web content and materials to the local context, with an AI pipeline and specialist validation',
     'b.gov.c2':'Define execution guidelines, evaluation standards and quality rubrics for local activities and Game Jams',
     'b.gov.c3':'Host and distribute the Learning Environment (official plugin) and the guided learning pathways',
@@ -610,6 +654,9 @@ const TRANSLATIONS = {
     'b.toc.t2':'Resultados inmediatos','b.toc.d2':'Los participantes desarrollan proyectos y ganan confianza para seguir creando. Los facilitadores amplían la capacidad de conducir experiencias prácticas. Las comunidades forman redes locales de aprendizaje.',
     'b.toc.t3':'Impacto esperado','b.toc.d3':'Democratización de la creación digital en nuevos territorios, formación de una generación de creadores y expansión del ecosistema Roblox en América Latina.',
     'b.gov.ct':'Equipo Central','b.gov.lt':'Socio Local',
+    'b.gov.ck':'Diseña el sistema','b.gov.lk':'Activa el territorio',
+    'b.gov.ch1':'Arquitectura y contenido','b.gov.ch2':'Calidad pedagógica','b.gov.ch3':'Herramientas y seguimiento','b.gov.ch4':'Supervisión e impacto',
+    'b.gov.lh1':'Movilización de la comunidad','b.gov.lh2':'Articulación institucional','b.gov.lh3':'Asistencia y operación','b.gov.lh4':'Facilitadores y datos',
     'b.gov.c1':'Adaptar la arquitectura pedagógica, plugins, contenido web y materiales al contexto local, con pipeline de IA y validación por especialistas',
     'b.gov.c2':'Definir directrices de ejecución, estándares de evaluación y rúbricas de calidad para actividades locales y Game Jams',
     'b.gov.c3':'Alojar y distribuir el Learning Environment (plugin oficial) y las rutas de aprendizaje guiadas',

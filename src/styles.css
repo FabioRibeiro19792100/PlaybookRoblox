@@ -6,6 +6,7 @@
       --red:    #C4413E;
       --rail-w: 256px;
       --aside-w: clamp(340px, 25vw, 380px);
+      --spacer-w: 52px;
     }
     :root, [data-theme="light"] {
       --bg:        #FFFFFF;
@@ -42,8 +43,8 @@
     }
 
     .app.no-aside {
-      grid-template-columns: var(--rail-w) 1fr;
-      grid-template-areas: "rail hero" "rail main" "rail foot";
+      grid-template-columns: var(--rail-w) 1fr var(--spacer-w);
+      grid-template-areas: "rail hero hero" "rail main spacer" "rail foot foot";
     }
 
     /* RAIL */
@@ -94,14 +95,12 @@
 
     /* CAPUT */
     .caput { background: var(--caput-bg); border-bottom: 0; padding: 20px 18px 20px 32px; flex-shrink: 0; }
-    .caput-eyebrow { display: flex; align-items: center; gap: 7px; margin-bottom: 8px; }
-    .caput-eyebrow-icon { color: var(--blue); flex-shrink: 0; }
-    .caput-eyebrow-label { font-family: 'Space Grotesk', sans-serif; font-size: 11.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--blue); }
     .caput-title { font-family: 'Space Grotesk', sans-serif; font-size: 21.8px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .caput-desc { font-size: 15.5px; color: var(--muted); max-width: 860px; line-height: 1.65; }
 
     /* BODY SLOT */
     .body-slot { flex: 1; padding: 28px 32px; overflow-y: auto; }
+    .body-slot-setup { padding-top: 0; }
 
     /* ASIDE */
     .aside { grid-area: aside; border-left: 1px solid var(--border); padding: 28px 28px; overflow-y: auto; display: flex; flex-direction: column; gap: 24px; background: var(--aside-bg); }
@@ -119,6 +118,12 @@
     .aside-tag.tip { color: var(--red); }
     .aside-tag.dash { color: var(--red); }
     .aside-tag.video { color: var(--blue); }
+
+    .right-spacer {
+      grid-area: spacer;
+      background: var(--aside-bg);
+      border-left: 1px solid var(--border);
+    }
 
     /* FOOTER */
     .logo-cell { grid-area: logo-cell; background: var(--aside-bg); border-left: 1px solid var(--border); border-top: 1px solid var(--border); padding: 10px 20px; display: flex; align-items: center; }
@@ -182,12 +187,22 @@
     .toc-title { font-family: 'Space Grotesk', sans-serif; font-size: 14.9px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .toc-desc { font-size: 14.9px; color: var(--muted); line-height: 1.6; }
 
-    /* Governance two-panel */
-    .gov-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
-    .gov-panel { border-top: 2px solid var(--border); padding-top: 14px; }
-    .gov-panel.central { border-top-color: var(--blue); }
-    .gov-panel.local { border-top-color: var(--amber); }
-    .gov-panel-title { font-family: 'Space Grotesk', sans-serif; font-size: 12.6px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: 14px; }
+    /* Governance editorial board */
+    .gov-board { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; position: relative; }
+    .gov-board::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: linear-gradient(to bottom, transparent 0%, var(--border) 12%, var(--border) 88%, transparent 100%); transform: translateX(-50%); }
+    .gov-track { position: relative; display: flex; flex-direction: column; gap: 16px; padding: 0 4px; border: 0; border-radius: 0; background: transparent; }
+    .gov-track::before { content: ""; position: absolute; top: 0; left: 4px; right: 4px; height: 2px; background: var(--border); }
+    .gov-track.central::before { background: var(--blue); }
+    .gov-track.local::before { background: var(--amber); }
+    .gov-track-head { display: flex; flex-direction: column; gap: 3px; padding: 12px 10px 2px; }
+    .gov-track-kicker { font-family: 'Space Grotesk', sans-serif; font-size: 10.3px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+    .gov-track-title { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; line-height: 1.1; color: var(--text); }
+    .gov-card-stack { display: flex; flex-direction: column; gap: 10px; }
+    .gov-card { padding: 14px 14px 15px; border: 1px solid var(--border); border-radius: 8px; background: color-mix(in srgb, var(--surface2) 62%, var(--surface) 38%); }
+    .gov-track.central .gov-card { border-left: 3px solid var(--blue); }
+    .gov-track.local .gov-card { border-left: 3px solid var(--amber); }
+    .gov-card-title { font-family: 'Space Grotesk', sans-serif; font-size: 13.2px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text); margin-bottom: 6px; }
+    .gov-card-desc { font-size: 14.4px; color: var(--muted); line-height: 1.58; }
 
     /* Timeline */
     .timeline { display: flex; flex-direction: column; gap: 0; }
@@ -239,11 +254,12 @@
     .biblio-card-label { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; color: var(--text); padding: 8px 10px 10px; }
 
     /* Setup México checklist */
-    .ckl { display: flex; flex-direction: column; gap: 26px; }
-    .ckl-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; position: sticky; top: 0; background: var(--bg); padding: 4px 0 10px; z-index: 2; border-bottom: 1px solid var(--border); }
-    .ckl-progress { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 200px; }
-    .ckl-progress-bar { flex: 1; height: 6px; border-radius: 3px; background: var(--border); overflow: hidden; max-width: 320px; }
-    .ckl-progress-bar span { display: block; height: 100%; background: var(--blue); border-radius: 3px; transition: width .25s; }
+    .ckl { display: flex; flex-direction: column; gap: 20px; overflow: visible; }
+    .ckl-head { display: flex; flex-direction: column; gap: 8px; position: sticky; top: 0; background: var(--caput-bg); padding: 12px 0 10px; margin-bottom: 4px; z-index: 40; border-bottom: 1px solid var(--border); }
+    .ckl-head-meta { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .ckl-progress { width: 100%; min-width: 0; }
+    .ckl-progress-bar { width: 100%; height: 1px; border-radius: 999px; background: color-mix(in srgb, var(--border) 88%, var(--surface) 12%); overflow: hidden; }
+    .ckl-progress-bar span { display: block; height: 100%; background: var(--blue); border-radius: 999px; transition: width .25s; }
     .ckl-progress-label { font-family: 'Space Grotesk', sans-serif; font-size: 12.6px; font-weight: 700; color: var(--muted); white-space: nowrap; }
     .ckl-sync { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .03em; color: var(--muted); white-space: nowrap; }
     .ckl-sync.synced { color: var(--blue); }
@@ -253,6 +269,10 @@
     .ckl-section-title { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .ckl-section-num { font-size: 12px; font-weight: 700; color: var(--red); }
     .ckl-table { display: flex; flex-direction: column; }
+    .ckl-section,
+    .ckl-table,
+    .ckl-row,
+    .ckl-section-title { position: relative; z-index: 0; }
     .ckl-row { display: grid; grid-template-columns: 1.6fr 1.5fr 0.8fr 54px; gap: 14px; align-items: center; padding: 11px 8px; border-bottom: 1px solid var(--border); cursor: pointer; }
     .ckl-row:hover:not(.ckl-row-head) { background: var(--surface); }
     .ckl-row-head { cursor: default; border-bottom: 1px solid var(--text); }
@@ -529,6 +549,7 @@ body {
   .rail,
   .main,
   .aside,
+  .right-spacer,
   .body-slot {
     overflow: visible;
   }
@@ -541,6 +562,10 @@ body {
   .aside {
     border-left: 0;
     border-top: 1px solid var(--border);
+  }
+
+  .right-spacer {
+    display: none;
   }
 
   .hero-content {

@@ -82,15 +82,6 @@ function ChevronRight() {
   );
 }
 
-function ClockIcon() {
-  return (
-    <svg className="caput-eyebrow-icon" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 8v4l2 2" />
-    </svg>
-  );
-}
-
 function RailIcon() {
   return (
     <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
@@ -326,15 +317,11 @@ export default function App() {
 
         <main className="main" ref={mainRef}>
           <div className="caput">
-            <div className="caput-eyebrow">
-              <ClockIcon />
-              <span className="caput-eyebrow-label">{currentPage.caputEyebrow[lang]}</span>
-            </div>
             <h2 className="caput-title">{currentPage.caputTitle[lang]}</h2>
             <p className="caput-desc">{currentPage.caputDesc[lang]}</p>
           </div>
 
-          <div className="body-slot" ref={bodySlotRef}>
+          <div className={`body-slot${currentPage.id === "setup" ? " body-slot-setup" : ""}`} ref={bodySlotRef}>
             {currentPage.id === "setup" ? (
               <SetupChecklist lang={lang} />
             ) : (
@@ -348,6 +335,8 @@ export default function App() {
             <div dangerouslySetInnerHTML={{ __html: asideHtml }} />
           </aside>
         )}
+
+        {!hasAside && <div className="right-spacer" aria-hidden="true" />}
 
         <footer className="foot">
           <span className="foot-brand">{getTranslation(lang, "foot.brand")}</span>

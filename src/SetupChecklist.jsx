@@ -80,11 +80,13 @@ export default function SetupChecklist({ lang }) {
   return (
     <div className="ckl">
       <div className="ckl-head">
+        <div className="ckl-head-meta">
+          <span className="ckl-progress-label">{doneCount}/{CHECKLIST_TOTAL} · {pct}%</span>
+          <span className={`ckl-sync ${sync}`}>{L.sync[sync]}</span>
+        </div>
         <div className="ckl-progress">
           <div className="ckl-progress-bar"><span style={{ width: `${pct}%` }} /></div>
-          <span className="ckl-progress-label">{doneCount}/{CHECKLIST_TOTAL} · {pct}%</span>
         </div>
-        <span className={`ckl-sync ${sync}`}>{L.sync[sync]}</span>
       </div>
 
       {CHECKLIST.map((sec) => (
