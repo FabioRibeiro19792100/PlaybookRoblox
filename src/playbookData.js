@@ -398,7 +398,7 @@ const TRANSLATIONS = {
     'b.visao.r2':'Ferramenta de criação usada para construir, editar e iterar nos projetos.',
     // Pilares
     'b.pil.t1':'Eventos presenciais','b.pil.d1':'Experiências práticas conduzidas por parceiros locais para aprendizagem baseada em projetos, desenvolvimento de experiências Roblox e integração entre participantes.',
-    'b.pil.t2':'Recursos tecnológicos','b.pil.d2':'Discord oficial, Plugin Oficial da Expedição, Roblox Studio Web e biblioteca de conteúdo em vídeo sustentam a jornada de aprendizagem.',
+    'b.pil.t2':'Recursos Pedagógicos','b.pil.d2':'Discord oficial, Plugin Oficial da Expedição, Roblox Studio Web e biblioteca de conteúdo em vídeo sustentam a jornada de aprendizagem.',
     'b.pil.t3':'Comunidade e engajamento','b.pil.d3':'Estratégias para manter participantes ativos antes, durante e depois dos eventos, incluindo desafios criativos e futuras Game Jams.',
     // Teoria
     'b.toc.t1':'Premissa','b.toc.d1':'Jovens aprendem melhor quando possuem ferramentas adequadas, experiências práticas, apoio de facilitadores e pertencimento a uma comunidade.',
@@ -508,7 +508,7 @@ const TRANSLATIONS = {
     'b.visao.r1':'Environment where participants explore, test and publish experiences.',
     'b.visao.r2':'Creation tool used to build, edit and iterate on projects.',
     'b.pil.t1':'In-person events','b.pil.d1':'Practical experiences led by local partners for project-based learning, Roblox experience development and participant integration.',
-    'b.pil.t2':'Technology resources','b.pil.d2':'Official Discord, Official Expedition Plugin, Roblox Studio Web and video content library sustain the learning journey.',
+    'b.pil.t2':'Pedagogical Resources','b.pil.d2':'Official Discord, Official Expedition Plugin, Roblox Studio Web and video content library sustain the learning journey.',
     'b.pil.t3':'Community and engagement','b.pil.d3':'Strategies to keep participants active before, during and after events, including creative challenges and future Game Jams.',
     'b.toc.t1':'Premise','b.toc.d1':'Young people learn better when they have adequate tools, practical experiences, facilitator support and community belonging.',
     'b.toc.t2':'Immediate results','b.toc.d2':'Participants develop projects and gain confidence to keep creating. Facilitators expand capacity to lead practical experiences. Communities form local learning networks.',
@@ -604,7 +604,7 @@ const TRANSLATIONS = {
     'b.visao.r1':'Entorno donde los participantes exploran, prueban y publican experiencias.',
     'b.visao.r2':'Herramienta de creación usada para construir, editar e iterar en los proyectos.',
     'b.pil.t1':'Eventos presenciales','b.pil.d1':'Experiencias prácticas conducidas por socios locales para aprendizaje basado en proyectos, desarrollo de experiencias Roblox e integración entre participantes.',
-    'b.pil.t2':'Recursos tecnológicos','b.pil.d2':'Discord oficial, Plugin Oficial de la Expedición, Roblox Studio Web y biblioteca de contenido en video sostienen el recorrido de aprendizaje.',
+    'b.pil.t2':'Recursos Pedagógicos','b.pil.d2':'Discord oficial, Plugin Oficial de la Expedición, Roblox Studio Web y biblioteca de contenido en video sostienen el recorrido de aprendizaje.',
     'b.pil.t3':'Comunidad y compromiso','b.pil.d3':'Estrategias para mantener participantes activos antes, durante y después de los eventos, incluyendo desafíos creativos y futuras Game Jams.',
     'b.toc.t1':'Premisa','b.toc.d1':'Los jóvenes aprenden mejor cuando tienen herramientas adecuadas, experiencias prácticas, apoyo de facilitadores y pertenencia a una comunidad.',
     'b.toc.t2':'Resultados inmediatos','b.toc.d2':'Los participantes desarrollan proyectos y ganan confianza para seguir creando. Los facilitadores amplían la capacidad de conducir experiencias prácticas. Las comunidades forman redes locales de aprendizaje.',
