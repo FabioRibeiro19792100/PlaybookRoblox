@@ -217,7 +217,7 @@ function PasswordGate({ onUnlock }) {
 
 export default function App() {
   const [currentPageId, setCurrentPageId] = useState("visao");
-  const [lang, setLang] = useState("pt");
+  const [lang, setLang] = useState("en");
   const [theme, setTheme] = useState("light");
   const [videoOpen, setVideoOpen] = useState(false);
   const [showSplash, setShowSplash] = useState(true);
