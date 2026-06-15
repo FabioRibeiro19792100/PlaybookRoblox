@@ -374,6 +374,7 @@ const ASIDES = {
     ${asideItem(linkIcon,'a.ref.video','a.tag.video','video','/media/video/VideoManifestoENG.mp4')}
     ${asideItem(dashIcon,'a.ref.report','a.tag.dash','dash','https://exproblox.report')}
     ${asideItem(docIcon,'a.ref.miv','a.tag.doc','doc','https://drive.google.com/file/d/1L-vTGaYITo3n6SfQadoRHGuGuQCHRg8Z/view?usp=share_link')}
+    ${asideItem(docIcon,'a.ref.notes','a.tag.doc','doc','https://docs.google.com/document/d/17LDUxsMbd444f21Hai72h7PLry_duqtPUtxOyv7OPTk/edit?tab=t.0#heading=h.kh3vzpv9qeld')}
   </div>`,
   teoria: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${[1,2,3,4,5,6,7,8,9,10].map(i=>asideItem(docIcon,'a.ins.'+i,'','doc')).join('')}
@@ -512,7 +513,7 @@ const TRANSLATIONS = {
     'b.exp.s5':'Consolidar aprendizados da primeira empreitada',
     // Aside labels
     'a.ref':'Referências',
-    'a.ref.site':'Site da Expedição (Brasil)','a.ref.video':'Vídeo manifesto','a.ref.report':'Relatório Brasil','a.ref.miv':'Manual da marca (MIV)',
+    'a.ref.site':'Site da Expedição (Brasil)','a.ref.video':'Vídeo manifesto','a.ref.report':'Relatório Brasil','a.ref.miv':'Manual da marca (MIV)','a.ref.notes':'Notas de reunião',
     'a.tag.video':'Vídeo',
     'a.res':'Resultados esperados','a.ins':'Insumos da equipe central','a.lim':'Limites do parceiro',
     'a.ent':'Entregas relacionadas','a.mat':'Materiais oficiais',
@@ -612,7 +613,7 @@ const TRANSLATIONS = {
     'b.exp.s4':'Run the local pilots',
     'b.exp.s5':'Consolidate learnings from the first endeavor',
     'a.ref':'References',
-    'a.ref.site':'Expedition site (Brazil)','a.ref.video':'Manifesto video','a.ref.report':'Brazil report','a.ref.miv':'Brand manual (MIV)',
+    'a.ref.site':'Expedition site (Brazil)','a.ref.video':'Manifesto video','a.ref.report':'Brazil report','a.ref.miv':'Brand manual (MIV)','a.ref.notes':'Meeting notes',
     'a.tag.video':'Video',
     'a.res':'Expected results','a.ins':'Central team inputs','a.lim':'Partner limits',
     'a.ent':'Related deliverables','a.mat':'Official materials',
@@ -711,7 +712,7 @@ const TRANSLATIONS = {
     'b.exp.s4':'Ejecución de los pilotos locales',
     'b.exp.s5':'Consolidar aprendizajes de la primera iniciativa',
     'a.ref':'Referencias',
-    'a.ref.site':'Sitio de la Expedición (Brasil)','a.ref.video':'Video manifiesto','a.ref.report':'Informe Brasil','a.ref.miv':'Manual de marca (MIV)',
+    'a.ref.site':'Sitio de la Expedición (Brasil)','a.ref.video':'Video manifiesto','a.ref.report':'Informe Brasil','a.ref.miv':'Manual de marca (MIV)','a.ref.notes':'Notas de reunión',
     'a.tag.video':'Video',
     'a.res':'Resultados esperados','a.ins':'Insumos del equipo central','a.lim':'Límites del socio',
     'a.ent':'Entregas relacionadas','a.mat':'Materiales oficiales',
