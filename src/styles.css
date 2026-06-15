@@ -62,6 +62,7 @@
     .rail-item:hover { opacity: 0.8; }
     .rail-item.active { opacity: 1; font-weight: 500; border-left-color: var(--red); background: transparent !important; }
     .rail-item svg { flex-shrink: 0; }
+    .rail-item-label { display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
     ::-webkit-scrollbar { width: 3px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
     /* HERO */
@@ -97,6 +98,7 @@
     .caput { background: var(--caput-bg); border-bottom: 0; padding: 20px 18px 20px 32px; flex-shrink: 0; }
     .caput-title { font-family: 'Space Grotesk', sans-serif; font-size: 21.8px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .caput-desc { font-size: 15.5px; color: var(--muted); max-width: 860px; line-height: 1.65; }
+    .app.no-aside .caput-desc { max-width: 1180px; }
 
     /* BODY SLOT */
     .body-slot { flex: 1; padding: 28px 32px; overflow-y: auto; }
@@ -197,10 +199,12 @@
     .gov-track-head { display: flex; flex-direction: column; gap: 3px; padding: 12px 10px 2px; }
     .gov-track-kicker { font-family: 'Space Grotesk', sans-serif; font-size: 10.3px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
     .gov-track-title { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; line-height: 1.1; color: var(--text); }
-    .gov-card-stack { display: flex; flex-direction: column; gap: 10px; }
-    .gov-card { padding: 14px 14px 15px; border: 1px solid var(--border); border-radius: 8px; background: color-mix(in srgb, var(--surface2) 62%, var(--surface) 38%); }
-    .gov-track.central .gov-card { border-left: 3px solid var(--blue); }
-    .gov-track.local .gov-card { border-left: 3px solid var(--amber); }
+    .gov-card-stack { display: flex; flex-direction: column; gap: 0; }
+    .gov-card { position: relative; padding: 14px 0 15px 21px; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; background: transparent; }
+    .gov-card:first-child { border-top: 1px solid var(--border); }
+    .gov-card::before { content: ""; position: absolute; left: 0; top: 14px; bottom: 14px; width: 3px; border-radius: 2px; background: var(--border); }
+    .gov-track.central .gov-card::before { background: var(--blue); }
+    .gov-track.local .gov-card::before { background: var(--amber); }
     .gov-card-title { font-family: 'Space Grotesk', sans-serif; font-size: 13.2px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text); margin-bottom: 6px; }
     .gov-card-desc { font-size: 14.4px; color: var(--muted); line-height: 1.58; }
 
@@ -255,10 +259,10 @@
 
     /* Setup México checklist */
     .ckl { display: flex; flex-direction: column; gap: 20px; overflow: visible; }
-    .ckl-head { display: flex; flex-direction: column; gap: 8px; position: sticky; top: 0; background: var(--caput-bg); padding: 12px 0 10px; margin-bottom: 4px; z-index: 40; border-bottom: 1px solid var(--border); }
+    .ckl-head { display: flex; flex-direction: column; gap: 0; position: sticky; top: 0; background: color-mix(in srgb, var(--caput-bg) 82%, var(--surface2) 18%); padding: 12px 32px 10px; margin: 0 -32px 4px; z-index: 40; border-bottom: 1px solid var(--border); }
     .ckl-head-meta { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .ckl-progress { width: 100%; min-width: 0; }
-    .ckl-progress-bar { width: 100%; height: 1px; border-radius: 999px; background: color-mix(in srgb, var(--border) 88%, var(--surface) 12%); overflow: hidden; }
+    .ckl-progress-bar { width: 100%; height: 2px; border-radius: 999px; background: color-mix(in srgb, var(--blue) 32%, var(--surface) 68%); overflow: hidden; }
     .ckl-progress-bar span { display: block; height: 100%; background: var(--blue); border-radius: 999px; transition: width .25s; }
     .ckl-progress-label { font-family: 'Space Grotesk', sans-serif; font-size: 12.6px; font-weight: 700; color: var(--muted); white-space: nowrap; }
     .ckl-sync { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .03em; color: var(--muted); white-space: nowrap; }
@@ -273,17 +277,25 @@
     .ckl-table,
     .ckl-row,
     .ckl-section-title { position: relative; z-index: 0; }
-    .ckl-row { display: grid; grid-template-columns: 1.6fr 1.5fr 0.8fr 54px; gap: 14px; align-items: center; padding: 11px 8px; border-bottom: 1px solid var(--border); cursor: pointer; }
+    .ckl-row { display: grid; grid-template-columns: 1.6fr 1.5fr 92px 54px; gap: 18px; align-items: start; padding: 11px 8px; border-bottom: 1px solid var(--border); cursor: pointer; }
     .ckl-row:hover:not(.ckl-row-head) { background: var(--surface); }
     .ckl-row-head { cursor: default; border-bottom: 1px solid var(--text); }
     .ckl-row-head > div { font-family: 'Space Grotesk', sans-serif; font-size: 10.3px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-    .ckl-task { font-size: 14px; color: var(--text); line-height: 1.45; font-weight: 500; }
-    .ckl-deliv { font-size: 13.2px; color: var(--muted); line-height: 1.45; }
-    .ckl-resp { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; color: var(--text); }
-    .ckl-check-col { display: flex; justify-content: center; }
+    .ckl-task { font-size: 14px; color: var(--text); line-height: 1.45; font-weight: 500; padding-right: 14px; }
+    .ckl-deliv { font-size: 13.2px; color: var(--muted); line-height: 1.45; padding-right: 12px; }
+    .ckl-resp { display: flex; align-items: flex-start; padding-top: 1px; }
+    .ckl-flags { display: inline-flex; align-items: center; gap: 6px; }
+    .ckl-flag { width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+    .ckl-flag-svg { display: block; width: 26px; height: 26px; }
+    .ckl-check-col { display: flex; justify-content: center; padding-top: 1px; }
     .ckl-row input[type="checkbox"] { width: 17px; height: 17px; accent-color: var(--blue); cursor: pointer; }
     .ckl-row.is-done { opacity: .65; }
     .ckl-row.is-done .ckl-task { text-decoration: line-through; color: var(--muted); }
+
+    .mx-flag-badge { width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+    .mx-flag-badge-svg { display: block; width: 20px; height: 20px; }
+    .rail-flag-badge { width: 16px; height: 16px; box-shadow: none; }
+    .rail-flag-badge .mx-flag-badge-svg { width: 16px; height: 16px; }
 
     /* Community phases */
     .phase-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }

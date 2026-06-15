@@ -1,6 +1,7 @@
 // Pre-operational checklist — Local Partner Mexico (Expedición Roblox México)
-// Each translatable field is { pt, en, es }. `resp` holds proper names (Aurora,
-// Mastertech, Roblox) and is language-neutral. Task ids are `s{section}t{index}`
+// Each translatable field is { pt, en, es }. `resp` marks involvement and keeps
+// existing source naming only for deriving Mexico/Brazil badges in the UI.
+// Task ids are `s{section}t{index}`
 // (derived in the component) and are used for persistence — do not reorder.
 
 export const CHECKLIST = [
@@ -12,8 +13,6 @@ export const CHECKLIST = [
       { task: { pt: 'Criar grupo operacional com Mastertech, Aurora e Roblox, se aplicável', en: 'Create an operational group with Mastertech, Aurora and Roblox, if applicable', es: 'Crear un grupo operativo con Mastertech, Aurora y Roblox, si aplica' }, deliverable: { pt: 'Canal oficial de comunicação ativo', en: 'Active official communication channel', es: 'Canal oficial de comunicación activo' }, resp: 'Aurora + Mastertech' },
       { task: { pt: 'Validar calendário macro das 5 ativações locais', en: 'Validate the macro calendar of the 5 local activations', es: 'Validar el calendario macro de las 5 activaciones locales' }, deliverable: { pt: 'Cronograma preliminar por cidade/local', en: 'Preliminary schedule by city/venue', es: 'Cronograma preliminar por ciudad/sede' }, resp: 'Aurora' },
       { task: { pt: 'Confirmar quais 2 eventos terão presença de facilitador Mastertech', en: 'Confirm which 2 events will have a Mastertech facilitator present', es: 'Confirmar cuáles 2 eventos tendrán presencia de facilitador Mastertech' }, deliverable: { pt: 'Lista de eventos prioritários para visita presencial', en: 'List of priority events for in-person visit', es: 'Lista de eventos prioritarios para visita presencial' }, resp: 'Aurora + Mastertech' },
-      { task: { pt: 'Definir cadência de reuniões operacionais', en: 'Define the cadence of operational meetings', es: 'Definir la cadencia de reuniones operativas' }, deliverable: { pt: 'Reuniões semanais ou quinzenais agendadas', en: 'Weekly or biweekly meetings scheduled', es: 'Reuniones semanales o quincenales agendadas' }, resp: 'Aurora + Mastertech' },
-      { task: { pt: 'Revisar o escopo do parceiro local e limites de responsabilidade da Mastertech', en: "Review the local partner scope and Mastertech's responsibility limits", es: 'Revisar el alcance del socio local y los límites de responsabilidad de Mastertech' }, deliverable: { pt: 'Matriz RACI validada', en: 'Validated RACI matrix', es: 'Matriz RACI validada' }, resp: 'Aurora + Mastertech' },
     ],
   },
   {

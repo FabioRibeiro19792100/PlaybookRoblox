@@ -98,6 +98,30 @@ function CheckIcon() {
   );
 }
 
+function MexicoFlagBadge({ className = "" }) {
+  return (
+    <span className={`mx-flag-badge${className ? ` ${className}` : ""}`} aria-hidden="true">
+      <svg className="mx-flag-badge-svg" viewBox="0 0 26 26">
+        <defs>
+          <clipPath id="mx-flag-badge-circle">
+            <circle cx="13" cy="13" r="13" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#mx-flag-badge-circle)">
+          <rect width="8.67" height="26" x="0" y="0" fill="#0f7a53" />
+          <rect width="8.66" height="26" x="8.67" y="0" fill="#f7f5ef" />
+          <rect width="8.67" height="26" x="17.33" y="0" fill="#d91f2d" />
+          <circle cx="13" cy="13" r="2.1" fill="#b07a2a" />
+          <path d="M13 9.8c1.2 0 2.05.85 2.05 1.9 0 1.15-.9 2.1-2.05 2.1s-2.05-.95-2.05-2.1c0-1.05.85-1.9 2.05-1.9Z" fill="#7a4b21" />
+          <path d="M11.2 15.1c.55.45 1.15.7 1.8.7.68 0 1.3-.25 1.82-.72" stroke="#2f8a57" strokeWidth="0.9" strokeLinecap="round" />
+          <path d="M10.9 14.7c-.65.28-1.15.7-1.45 1.32M15.1 14.7c.65.28 1.15.7 1.45 1.32" stroke="#b07a2a" strokeWidth="0.7" strokeLinecap="round" />
+        </g>
+        <circle cx="13" cy="13" r="12.5" fill="none" stroke="rgba(0,0,0,.08)" />
+      </svg>
+    </span>
+  );
+}
+
 function VideoOverlayTrigger({ title, onOpen }) {
   return (
     <button className="hero-video-trigger" type="button" onClick={onOpen} aria-label={title}>
@@ -264,7 +288,10 @@ export default function App() {
                   onClick={() => setCurrentPageId(pageId)}
                 >
                   <RailIcon />
-                  <span>{getTranslation(lang, `n.${pageId === "ferramentas" ? "ferr" : pageId === "comunidade" ? "com" : pageId === "expansao" ? "exp" : pageId}`)}</span>
+                  <span className="rail-item-label">
+                    {getTranslation(lang, `n.${pageId === "ferramentas" ? "ferr" : pageId === "comunidade" ? "com" : pageId === "expansao" ? "exp" : pageId}`)}
+                    {pageId === "setup" ? <MexicoFlagBadge className="rail-flag-badge" /> : null}
+                  </span>
                 </button>
               ))}
             </div>

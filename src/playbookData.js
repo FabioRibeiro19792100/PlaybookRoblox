@@ -38,8 +38,8 @@ export const PAGES = [
     title: { pt:'Setup México', en:'Setup Mexico', es:'Setup México' },
     img: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&auto=format&fit=crop',
     caputEyebrow: { pt:'Checklist pré-operacional — Parceiro Local', en:'Pre-operational checklist — Local Partner', es:'Checklist preoperativo — Socio Local' },
-    caputTitle: { pt:'O evento se decide antes dele', en:'The event is decided before it happens', es:'El evento se decide antes de que suceda' },
-    caputDesc: { pt:'Marque cada tarefa conforme avança. O estado é compartilhado entre a equipe e fica salvo automaticamente.', en:'Check off each task as you progress. The state is shared across the team and saved automatically.', es:'Marca cada tarea a medida que avanzas. El estado se comparte entre el equipo y se guarda automáticamente.' },
+    caputTitle: { pt:'Uma base comum, aberta à adaptação local', en:'A common base, open to local adaptation', es:'Una base común, abierta a la adaptación local' },
+    caputDesc: { pt:'Esta primeira visão reúne boas práticas que recomendamos como base comum para a realização do programa. Ela orienta a operação inicial, pode ser ajustada ao contexto, às capacidades locais e às escolhas do parceiro, e prevê reuniões de trabalho semanais nesta etapa.', en:'This first view brings together best practices that we recommend as a common base for delivering the program. It guides the initial operation, can be adjusted to the context, local capacities and the partner’s choices, and includes weekly working meetings at this stage.', es:'Esta primera visión reúne buenas prácticas que recomendamos como base común para la realización del programa. Orienta la operación inicial, puede ajustarse al contexto, a las capacidades locales y a las decisiones del socio, y prevé reuniones de trabajo semanales en esta etapa.' },
     body: 'setup',
     aside: 'empty'
   },
@@ -79,7 +79,7 @@ export const PAGES = [
   {
     id: 'ferramentas',
     group: { pt:'Planning & Execution', en:'Planning & Execution', es:'Planificación & Ejecución' },
-    title: { pt:'Recursos Pedagógicos', en:'Pedagogical Resources', es:'Recursos Pedagógicos' },
+    title: { pt:'Recursos Tecnológicos', en:'Technology Resources', es:'Recursos Tecnológicos' },
     img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop',
     caputEyebrow: { pt:'A camada digital da jornada', en:'The digital layer of the journey', es:'La capa digital del recorrido' },
     caputTitle: { pt:'A camada digital da jornada', en:'The digital layer of the journey', es:'La capa digital del recorrido' },
@@ -420,7 +420,7 @@ const TRANSLATIONS = {
     // Rail items
     'n.visao':'Visão geral','n.pilares':'Pilares','n.teoria':'Teoria da mudança',
     'n.gov':'Governança','n.setup':'Setup México','n.evento':'Evento presencial',
-    'n.infra':'Infraestrutura','n.metodo':'Metodologia','n.ferr':'Recursos Pedagógicos',
+    'n.infra':'Infraestrutura','n.metodo':'Metodologia','n.ferr':'Recursos Tecnológicos',
     'n.partic':'Participantes','n.com':'Continuidade','n.aval':'Avaliação','n.exp':'Expansão',
     // Footer
     'foot.brand':'Expedição Roblox 2026','foot.note':'Área de relacionamento com parceiros',
@@ -436,7 +436,7 @@ const TRANSLATIONS = {
     'b.visao.r2':'Ferramenta de criação usada para construir, editar e iterar nos projetos.',
     // Pilares
     'b.pil.t1':'Eventos presenciais','b.pil.d1':'Experiências práticas conduzidas por parceiros locais para aprendizagem baseada em projetos, desenvolvimento de experiências Roblox e integração entre participantes.',
-    'b.pil.t2':'Recursos Pedagógicos','b.pil.d2':'Discord oficial, Plugin Oficial da Expedição, Roblox Studio Web e biblioteca de conteúdo em vídeo sustentam a jornada de aprendizagem.',
+    'b.pil.t2':'Recursos Tecnológicos','b.pil.d2':'Discord oficial, Plugin Oficial da Expedição, Roblox Studio Web e biblioteca de conteúdo em vídeo sustentam a jornada de aprendizagem.',
     'b.pil.t3':'Comunidade e engajamento','b.pil.d3':'Estratégias para manter participantes ativos antes, durante e depois dos eventos, incluindo desafios criativos e futuras Game Jams.',
     // Teoria
     'b.toc.t1':'Premissa','b.toc.d1':'Jovens aprendem melhor quando possuem ferramentas adequadas, experiências práticas, apoio de facilitadores e pertencimento a uma comunidade.',
@@ -537,7 +537,7 @@ const TRANSLATIONS = {
     'g.dir':'Project Guidelines','g.plan':'Planning & Execution','g.out':'Outcomes',
     'n.visao':'Overview','n.pilares':'Pillars','n.teoria':'Theory of Change',
     'n.gov':'Governance','n.setup':'Setup Mexico','n.evento':'In-person Event',
-    'n.infra':'Infrastructure','n.metodo':'Methodology','n.ferr':'Pedagogical Resources',
+    'n.infra':'Infrastructure','n.metodo':'Methodology','n.ferr':'Technology Resources',
     'n.partic':'Participants','n.com':'Continuity','n.aval':'Evaluation','n.exp':'Expansion',
     'foot.brand':'Roblox Expedition 2026','foot.note':'Partner relations area',
     'theme.tolight':'Light mode','theme.todark':'Dark mode',
@@ -549,7 +549,7 @@ const TRANSLATIONS = {
     'b.visao.r1':'Environment where participants explore, test and publish experiences.',
     'b.visao.r2':'Creation tool used to build, edit and iterate on projects.',
     'b.pil.t1':'In-person events','b.pil.d1':'Practical experiences led by local partners for project-based learning, Roblox experience development and participant integration.',
-    'b.pil.t2':'Pedagogical Resources','b.pil.d2':'Official Discord, Official Expedition Plugin, Roblox Studio Web and video content library sustain the learning journey.',
+    'b.pil.t2':'Technology Resources','b.pil.d2':'Official Discord, Official Expedition Plugin, Roblox Studio Web and video content library sustain the learning journey.',
     'b.pil.t3':'Community and engagement','b.pil.d3':'Strategies to keep participants active before, during and after events, including creative challenges and future Game Jams.',
     'b.toc.t1':'Premise','b.toc.d1':'Young people learn better when they have adequate tools, practical experiences, facilitator support and community belonging.',
     'b.toc.t2':'Immediate results','b.toc.d2':'Participants develop projects and gain confidence to keep creating. Facilitators expand capacity to lead practical experiences. Communities form local learning networks.',
@@ -636,7 +636,7 @@ const TRANSLATIONS = {
     'g.dir':'Directrices del proyecto','g.plan':'Planificación & Ejecución','g.out':'Resultados',
     'n.visao':'Visión general','n.pilares':'Pilares','n.teoria':'Teoría del cambio',
     'n.gov':'Gobernanza','n.setup':'Setup México','n.evento':'Evento presencial',
-    'n.infra':'Infraestructura','n.metodo':'Metodología','n.ferr':'Recursos Pedagógicos',
+    'n.infra':'Infraestructura','n.metodo':'Metodología','n.ferr':'Recursos Tecnológicos',
     'n.partic':'Participantes','n.com':'Continuidad','n.aval':'Evaluación','n.exp':'Expansión',
     'foot.brand':'Expedición Roblox 2026','foot.note':'Área de relación con socios',
     'theme.tolight':'Modo claro','theme.todark':'Modo oscuro',
@@ -648,7 +648,7 @@ const TRANSLATIONS = {
     'b.visao.r1':'Entorno donde los participantes exploran, prueban y publican experiencias.',
     'b.visao.r2':'Herramienta de creación usada para construir, editar e iterar en los proyectos.',
     'b.pil.t1':'Eventos presenciales','b.pil.d1':'Experiencias prácticas conducidas por socios locales para aprendizaje basado en proyectos, desarrollo de experiencias Roblox e integración entre participantes.',
-    'b.pil.t2':'Recursos Pedagógicos','b.pil.d2':'Discord oficial, Plugin Oficial de la Expedición, Roblox Studio Web y biblioteca de contenido en video sostienen el recorrido de aprendizaje.',
+    'b.pil.t2':'Recursos Tecnológicos','b.pil.d2':'Discord oficial, Plugin Oficial de la Expedición, Roblox Studio Web y biblioteca de contenido en video sostienen el recorrido de aprendizaje.',
     'b.pil.t3':'Comunidad y compromiso','b.pil.d3':'Estrategias para mantener participantes activos antes, durante y después de los eventos, incluyendo desafíos creativos y futuras Game Jams.',
     'b.toc.t1':'Premisa','b.toc.d1':'Los jóvenes aprenden mejor cuando tienen herramientas adecuadas, experiencias prácticas, apoyo de facilitadores y pertenencia a una comunidad.',
     'b.toc.t2':'Resultados inmediatos','b.toc.d2':'Los participantes desarrollan proyectos y ganan confianza para seguir creando. Los facilitadores amplían la capacidad de conducir experiencias prácticas. Las comunidades forman redes locales de aprendizaje.',
