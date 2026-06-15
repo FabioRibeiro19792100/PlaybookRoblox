@@ -196,20 +196,20 @@ function PasswordGate({ onUnlock }) {
   };
 
   return (
-    <div className="gate" role="dialog" aria-modal="true" aria-label="Acesso restrito">
+    <div className="gate" role="dialog" aria-modal="true" aria-label="Restricted access">
       <form className="gate-card" onSubmit={submit}>
-        <div className="gate-title">Acesso restrito</div>
-        <div className="gate-desc">Digite a senha para visualizar o playbook.</div>
+        <div className="gate-title">Restricted access</div>
+        <div className="gate-desc">Enter the password to view the playbook.</div>
         <input
           className={`gate-input${error ? " error" : ""}`}
           type="password"
           value={value}
           autoFocus
-          placeholder="Senha"
+          placeholder="Password"
           onChange={(e) => { setValue(e.target.value); setError(false); }}
         />
-        {error && <div className="gate-error">Senha incorreta.</div>}
-        <button className="gate-btn" type="submit">Entrar</button>
+        {error && <div className="gate-error">Incorrect password.</div>}
+        <button className="gate-btn" type="submit">Enter</button>
       </form>
     </div>
   );
