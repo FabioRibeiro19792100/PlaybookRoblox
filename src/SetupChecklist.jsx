@@ -9,11 +9,11 @@ const SHEETS_ENDPOINT =
 const LS_KEY = "setup-mx-checklist-v1";
 
 const LABELS = {
-  pt: { task: "Tarefa", deliverable: "Entregável esperado", resp: "Envolvimento", done: "Feito",
+  pt: { task: "Tarefa", deliverable: "Entregável esperado", resp: "Times envolvidos", done: "Feito",
     sync: { local: "Salvo neste dispositivo", loading: "Carregando…", saving: "Salvando…", synced: "Sincronizado", offline: "Offline — salvo localmente" } },
-  en: { task: "Task", deliverable: "Expected deliverable", resp: "Involvement", done: "Done",
+  en: { task: "Task", deliverable: "Expected deliverable", resp: "Teams involved", done: "Done",
     sync: { local: "Saved on this device", loading: "Loading…", saving: "Saving…", synced: "Synced", offline: "Offline — saved locally" } },
-  es: { task: "Tarea", deliverable: "Entregable esperado", resp: "Participación", done: "Hecho",
+  es: { task: "Tarea", deliverable: "Entregable esperado", resp: "Equipos involucrados", done: "Hecho",
     sync: { local: "Guardado en este dispositivo", loading: "Cargando…", saving: "Guardando…", synced: "Sincronizado", offline: "Offline — guardado localmente" } },
 };
 
