@@ -179,6 +179,42 @@ function VideoModal({ copy, isOpen, onClose }) {
   );
 }
 
+const ACCESS_PASSWORD = "P@ssw0rd";
+
+function PasswordGate({ onUnlock }) {
+  const [value, setValue] = useState("");
+  const [error, setError] = useState(false);
+
+  const submit = (event) => {
+    event.preventDefault();
+    if (value === ACCESS_PASSWORD) {
+      try { localStorage.setItem("pb-unlocked", "1"); } catch { /* ignore */ }
+      onUnlock();
+    } else {
+      setError(true);
+    }
+  };
+
+  return (
+    <div className="gate" role="dialog" aria-modal="true" aria-label="Acesso restrito">
+      <form className="gate-card" onSubmit={submit}>
+        <div className="gate-title">Acesso restrito</div>
+        <div className="gate-desc">Digite a senha para visualizar o playbook.</div>
+        <input
+          className={`gate-input${error ? " error" : ""}`}
+          type="password"
+          value={value}
+          autoFocus
+          placeholder="Senha"
+          onChange={(e) => { setValue(e.target.value); setError(false); }}
+        />
+        {error && <div className="gate-error">Senha incorreta.</div>}
+        <button className="gate-btn" type="submit">Entrar</button>
+      </form>
+    </div>
+  );
+}
+
 export default function App() {
   const [currentPageId, setCurrentPageId] = useState("visao");
   const [lang, setLang] = useState("pt");
@@ -186,6 +222,9 @@ export default function App() {
   const [videoOpen, setVideoOpen] = useState(false);
   const [showSplash, setShowSplash] = useState(true);
   const [splashPhase, setSplashPhase] = useState("logo");
+  const [locked, setLocked] = useState(() => {
+    try { return localStorage.getItem("pb-unlocked") !== "1"; } catch { return true; }
+  });
   const mainRef = useRef(null);
   const bodySlotRef = useRef(null);
 
@@ -372,6 +411,8 @@ export default function App() {
       </div>
 
       <VideoModal copy={currentCopy} isOpen={videoOpen} onClose={() => setVideoOpen(false)} />
+
+      {locked && <PasswordGate onUnlock={() => setLocked(false)} />}
     </>
   );
 }
