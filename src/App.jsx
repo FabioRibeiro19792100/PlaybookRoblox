@@ -35,7 +35,8 @@ const HERO_IMAGES = {
 };
 
 const VIDEO_SRC = "/media/video/VideoManifestoENG.mp4";
-const REAL_LOGO = "/Logo.png";
+const LOGO_BRASIL = "/logo-brasil.png";
+const LOGO_MEXICO = "/logo-mexico.png";
 
 const MODE_LABELS = {
   pt: { light: "Modo claro", dark: "Modo escuro" },
@@ -120,6 +121,16 @@ function MexicoFlagBadge({ className = "" }) {
         <circle cx="13" cy="13" r="12.5" fill="none" stroke="rgba(0,0,0,.08)" />
       </svg>
     </span>
+  );
+}
+
+function BrandLockup({ id, className = "" }) {
+  return (
+    <div id={id} className={`brand-lockup${className ? ` ${className}` : ""}`}>
+      <img className="brand-logo" src={LOGO_BRASIL} alt="Expedição Roblox Brasil" />
+      <span className="brand-divider" aria-hidden="true" />
+      <img className="brand-logo" src={LOGO_MEXICO} alt="Expedición Roblox México" />
+    </div>
   );
 }
 
@@ -294,7 +305,7 @@ export default function App() {
     <>
       <div id="splash" className={showSplash ? "" : "hidden"} data-phase={splashPhase} aria-hidden={!showSplash}>
         <div className="splash-inner">
-          <img id="splash-logo" src={REAL_LOGO} alt="Expedição Roblox" />
+          <BrandLockup id="splash-logo" className="splash-lockup" />
           <div className="splash-title-wrap" aria-hidden={splashPhase !== "title"}>
             <span className="splash-title-arrow" aria-hidden="true">→</span>
             <span className="splash-title">Playbook Latam</span>
@@ -343,7 +354,7 @@ export default function App() {
           <div className="hero-overlay" />
           <div className="hero-accent-line" />
           <div className="hero-logo-shadow" />
-          <img className="hero-logo" src={REAL_LOGO} alt="Expedição Roblox" />
+          <BrandLockup className="hero-logo" />
           {currentPageId === "visao" ? <VideoOverlayTrigger title={currentCopy.cta} onOpen={() => setVideoOpen(true)} /> : null}
 
           <div className="hero-content">
