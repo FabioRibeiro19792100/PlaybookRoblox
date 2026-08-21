@@ -12,7 +12,7 @@ const RAIL_GROUPS = [
   { labelKey: "g.dir", items: ["visao", "pilares", "gov"] },
   {
     labelKey: "g.plan",
-    items: ["setup", "evento", "infra", "metodo", "ferramentas"],
+    items: ["setup", "evento", "infra", "tecnico", "metodo", "ferramentas"],
   },
   { labelKey: "g.out", items: ["comunidade", "aval", "expansao"] },
 ];
@@ -25,6 +25,7 @@ const HERO_IMAGES = {
   setup: "/media/photos/IMG_4076.CR3.png",
   evento: "/media/photos/IMG_4077.CR3.png",
   infra: "/media/photos/IMG_4086.CR3.png",
+  tecnico: "/media/photos/IMG_4298.CR3.png",
   metodo: "/media/photos/IMG_4130.CR3.png",
   ferramentas: "/media/photos/IMG_4177.CR3.png",
   partic: "/media/photos/IMG_4263.CR3.png",

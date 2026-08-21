@@ -1,3 +1,5 @@
+import { renderTechBody } from './techData';
+
 export const PAGES = [
   {
     id: 'visao',
@@ -64,6 +66,17 @@ export const PAGES = [
     caputDesc: { pt:'Três listas de verificação descrevem as condições que tornam o evento viável em qualquer território. Quando todas fecham, a operação avança com segurança.', en:'Three checklists describe the conditions that make the event viable in any territory. When all are met, the operation moves forward safely.', es:'Tres listas de verificación describen las condiciones que hacen viable el evento en cualquier territorio.' },
     body: 'infra',
     aside: 'infra'
+  },
+  {
+    id: 'tecnico',
+    group: { pt:'Planning & Execution', en:'Planning & Execution', es:'Planificación & Ejecución' },
+    title: { pt:'Requisitos técnicos', en:'Technical Requirements', es:'Requisitos técnicos' },
+    img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop',
+    caputEyebrow: { pt:'Perguntas da TI, respondidas', en:'IT questions, answered', es:'Preguntas de TI, respondidas' },
+    caputTitle: { pt:'Perguntas da TI, respondidas', en:'IT questions, answered', es:'Preguntas de TI, respondidas' },
+    caputDesc: { pt:'Especificações de máquina, banda, allowlist de domínios e problemas conhecidos, em formato de pergunta e resposta para compartilhar com a equipe técnica do local antes do evento.', en:'Machine specs, bandwidth, domain allowlist and known issues, as questions and answers to share with the venue’s technical team before the event.', es:'Especificaciones de máquina, ancho de banda, lista de dominios permitidos y problemas conocidos, en formato de pregunta y respuesta para compartir con el equipo técnico del lugar antes del evento.' },
+    body: 'tecnico',
+    aside: 'tecnico'
   },
   {
     id: 'metodo',
@@ -273,6 +286,8 @@ const BODIES = {
       </div>
     </div>`,
 
+  tecnico: () => renderTechBody(renderLang),
+
   metodo: () => `
     <div class="mat-grid">
       <a class="mat-item" href="https://drive.google.com/file/d/1EaHJOZxpAPiSbZ055daWjcMb3cVUWyv0/view?usp=sharing" target="_blank" rel="noopener"><svg class="mat-item-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg><div class="mat-item-title">${t('b.mat.t1')}</div><div class="mat-item-desc">${t('b.mat.d1')}</div></a>
@@ -389,6 +404,11 @@ const ASIDES = {
   infra: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${asideItem(linkIcon,'a.infra.1','a.tag.link','link','https://create.roblox.com/docs/pt-br/studio/setup')}
   </div>`,
+  tecnico: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
+    ${asideItem(linkIcon,'a.tec.1','a.tag.link','link','https://one.one.one.one/')}
+    ${asideItem(linkIcon,'a.tec.2','a.tag.link','link','https://create.roblox.com/docs/pt-br/studio/setup')}
+    ${asideItem(linkIcon,'a.tec.3','a.tag.link','link','https://create.roblox.com/store/asset/125743081126783/Expedio-Roblox')}
+  </div>`,
   metodo: () => `<div class="aside-group"><span class="aside-label">${t('a.ref')}</span>
     ${[1,2,3,4,5].map(i=>asideItem(docIcon,'a.metodo.'+i,'a.tag.doc','doc')).join('')}
   </div>`,
@@ -421,7 +441,7 @@ const TRANSLATIONS = {
     // Rail items
     'n.visao':'Visão geral','n.pilares':'Pilares','n.teoria':'Teoria da mudança',
     'n.gov':'Governança','n.setup':'Setup México','n.evento':'Evento presencial',
-    'n.infra':'Infraestrutura','n.metodo':'Metodologia','n.ferr':'Recursos Tecnológicos',
+    'n.infra':'Infraestrutura','n.tecnico':'Requisitos técnicos','n.metodo':'Metodologia','n.ferr':'Recursos Tecnológicos',
     'n.partic':'Participantes','n.com':'Continuidade','n.aval':'Avaliação','n.exp':'Expansão',
     // Footer
     'foot.brand':'Expedição Roblox 2026','foot.note':'Área de relacionamento com parceiros',
@@ -532,13 +552,14 @@ const TRANSLATIONS = {
     'a.partic.1':'Materiais de Comunicação','a.partic.2':'Materiais de Divulgação',
     'a.aval.1':'Pesquisa de Feedback','a.aval.2':'Relatório','a.aval.3':'Planilha de Indicadores',
     'a.infra.1':'Requisitos básicos para o Studio',
+    'a.tec.1':'Cloudflare WARP (1.1.1.1)','a.tec.2':'Instalação do Roblox Studio','a.tec.3':'Plugin Oficial da Expedição',
     'a.metodo.1':'Canvas Oficial','a.metodo.2':'Guia do Facilitador','a.metodo.3':'Slides Oficiais','a.metodo.4':'Exemplos preenchidos','a.metodo.5':'Arquivos editáveis',
   },
   en: {
     'g.dir':'Project Guidelines','g.plan':'Planning & Execution','g.out':'Outcomes',
     'n.visao':'Overview','n.pilares':'Pillars','n.teoria':'Theory of Change',
     'n.gov':'Governance','n.setup':'Setup Mexico','n.evento':'In-person Event',
-    'n.infra':'Infrastructure','n.metodo':'Methodology','n.ferr':'Technology Resources',
+    'n.infra':'Infrastructure','n.tecnico':'Technical Requirements','n.metodo':'Methodology','n.ferr':'Technology Resources',
     'n.partic':'Participants','n.com':'Continuity','n.aval':'Evaluation','n.exp':'Expansion',
     'foot.brand':'Roblox Expedition 2026','foot.note':'Partner relations area',
     'theme.tolight':'Light mode','theme.todark':'Dark mode',
@@ -631,13 +652,14 @@ const TRANSLATIONS = {
     'a.partic.1':'Communication Materials','a.partic.2':'Promotional Materials',
     'a.aval.1':'Feedback Survey','a.aval.2':'Report','a.aval.3':'Indicators Spreadsheet',
     'a.infra.1':'Studio basic requirements',
+    'a.tec.1':'Cloudflare WARP (1.1.1.1)','a.tec.2':'Roblox Studio installation','a.tec.3':'Official Expedition plugin',
     'a.metodo.1':'Official Canvas','a.metodo.2':'Facilitator Guide','a.metodo.3':'Official Slides','a.metodo.4':'Filled examples','a.metodo.5':'Editable files',
   },
   es: {
     'g.dir':'Directrices del proyecto','g.plan':'Planificación & Ejecución','g.out':'Resultados',
     'n.visao':'Visión general','n.pilares':'Pilares','n.teoria':'Teoría del cambio',
     'n.gov':'Gobernanza','n.setup':'Setup México','n.evento':'Evento presencial',
-    'n.infra':'Infraestructura','n.metodo':'Metodología','n.ferr':'Recursos Tecnológicos',
+    'n.infra':'Infraestructura','n.tecnico':'Requisitos técnicos','n.metodo':'Metodología','n.ferr':'Recursos Tecnológicos',
     'n.partic':'Participantes','n.com':'Continuidad','n.aval':'Evaluación','n.exp':'Expansión',
     'foot.brand':'Expedición Roblox 2026','foot.note':'Área de relación con socios',
     'theme.tolight':'Modo claro','theme.todark':'Modo oscuro',
@@ -730,6 +752,7 @@ const TRANSLATIONS = {
     'a.partic.1':'Materiales de Comunicación','a.partic.2':'Materiales de Divulgación',
     'a.aval.1':'Encuesta de Retroalimentación','a.aval.2':'Informe','a.aval.3':'Planilla de Indicadores',
     'a.infra.1':'Requisitos básicos para el Studio',
+    'a.tec.1':'Cloudflare WARP (1.1.1.1)','a.tec.2':'Instalación de Roblox Studio','a.tec.3':'Plugin Oficial de la Expedición',
     'a.metodo.1':'Canvas Oficial','a.metodo.2':'Guía del Facilitador','a.metodo.3':'Diapositivas Oficiales','a.metodo.4':'Ejemplos completados','a.metodo.5':'Archivos editables',
   }
 };
